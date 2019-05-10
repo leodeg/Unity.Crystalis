@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3fe54f1b6367584096a159c786c7999, type: 3}
+  m_Name: RotatePlayerToMousePosition
+  m_EditorClassIdentifier: 
+  position: {fileID: 11400000, guid: 11cfe797a5f5b4a4cb726ccb0cacd8be, type: 2}
+  target: {fileID: 11400000, guid: 75e738cc83441b242af5374c23068189, type: 2}
+  deltaTime: {fileID: 11400000, guid: 2043598953651fe41a0e40e8e7f593ce, type: 2}
+  rotationSpeed: 6
+  slowRotationSpeed: 2
+  minDistance: 1.5
+  freezeYRotation: 1

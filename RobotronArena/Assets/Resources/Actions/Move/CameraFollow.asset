@@ -9,10 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3fe54f1b6367584096a159c786c7999, type: 3}
-  m_Name: RotateToPosition
+  m_Script: {fileID: 11500000, guid: 8c70a86e1cda4b54ea8c3fb39f27bd3a, type: 3}
+  m_Name: CameraFollow
   m_EditorClassIdentifier: 
-  position: {fileID: 11400000, guid: 11cfe797a5f5b4a4cb726ccb0cacd8be, type: 2}
+  useCustomCamera: 0
+  customCamera: {fileID: 0}
   target: {fileID: 11400000, guid: 75e738cc83441b242af5374c23068189, type: 2}
   deltaTime: {fileID: 11400000, guid: 2043598953651fe41a0e40e8e7f593ce, type: 2}
-  rotationSpeed: 10
+  speed: 5
+  offset: {x: 0, y: 30, z: -10}

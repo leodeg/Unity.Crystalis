@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3fe54f1b6367584096a159c786c7999, type: 3}
+  m_Name: RotateRightWeaponToMousePosition
+  m_EditorClassIdentifier: 
+  position: {fileID: 11400000, guid: 11cfe797a5f5b4a4cb726ccb0cacd8be, type: 2}
+  target: {fileID: 11400000, guid: a312a4a5218abd94a8fb9af31796e46d, type: 2}
+  deltaTime: {fileID: 11400000, guid: 2043598953651fe41a0e40e8e7f593ce, type: 2}
+  rotationSpeed: 2.5
+  slowRotationSpeed: 1
+  minDistance: 1
+  freezeYRotation: 0
