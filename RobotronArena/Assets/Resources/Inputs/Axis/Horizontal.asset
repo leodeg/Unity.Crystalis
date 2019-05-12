@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   axisName: Horizontal
   value: 0
-  debugValueToConsole: 1
+  debugValueToConsole: 0

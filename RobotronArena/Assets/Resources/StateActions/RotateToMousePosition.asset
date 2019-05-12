@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03ccaac06b8f55c428be2c6d868af58d, type: 3}
-  m_Name: MouseScrollWheel
+  m_Script: {fileID: 11500000, guid: 34afea26520c0bc4fbcd71fd73facdbd, type: 3}
+  m_Name: RotateToMousePosition
   m_EditorClassIdentifier: 
-  axisName: Mouse ScrollWheel
-  value: 0
-  debugValueToConsole: 0
+  position: {fileID: 11400000, guid: 04096b5deb888a142b300b099455e11b, type: 2}
+  rotationSpeed: 4
+  slowRotationSpeed: 0.5
+  minDistance: 1
+  freezeYRotation: 1

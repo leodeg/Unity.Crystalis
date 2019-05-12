@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a12363ec346cc04db560fec32998241, type: 3}
+  m_Name: MovePlayerViaInput
+  m_EditorClassIdentifier: 
+  horizontal: {fileID: 11400000, guid: dd515f53ed3e8b6449fe77499b480084, type: 2}
+  vertical: {fileID: 11400000, guid: f81bef43cd81cc9408a98e7946f6d936, type: 2}
+  translateSpace: 0
+  speed: 10

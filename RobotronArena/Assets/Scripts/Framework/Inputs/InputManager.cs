@@ -9,7 +9,7 @@ namespace LeoDeg.Inputs
     {
         public override void Execute ()
         {
-            throw new System.NotImplementedException ();
+            
         }
     }
 }

@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03ccaac06b8f55c428be2c6d868af58d, type: 3}
-  m_Name: MouseScrollWheel
+  m_Script: {fileID: 11500000, guid: a31444053fb8ba040869b020c12d39b2, type: 3}
+  m_Name: GameObjectPoolManager
   m_EditorClassIdentifier: 
-  axisName: Mouse ScrollWheel
-  value: 0
-  debugValueToConsole: 0
+  objectPools: []

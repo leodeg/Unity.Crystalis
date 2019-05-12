@@ -6,7 +6,18 @@ namespace LeoDeg.StateActions
 {
     public class StateMachine : MonoBehaviour
     {
-        private State currentState;
+        public State currentState;
+        public Scriptables.FloatScriptable deltaTime;
+        public Scriptables.FloatScriptable fixedDeltaTime;
+
+        [HideInInspector]
+        public Rigidbody rigidbodyInstance;
+        [HideInInspector]
+        public Animator animatorInstance;
+        [HideInInspector]
+        public Transform transformInstance;
+
+        #region State Machine Methods
 
         public void SetCurrentState (State state)
         {
@@ -17,6 +28,17 @@ namespace LeoDeg.StateActions
         {
             return currentState;
         }
+
+        private void Initialize ()
+        {
+            rigidbodyInstance = GetComponent<Rigidbody> ();
+            transformInstance = GetComponent<Transform> ();
+            animatorInstance = GetComponent<Animator> ();
+        }
+
+        #endregion
+
+        #region Unity Methods
 
         private void OnEnable ()
         {
@@ -30,6 +52,7 @@ namespace LeoDeg.StateActions
 
         private void Awake ()
         {
+            Initialize ();
             currentState.OnAwake (this);
         }
 
@@ -52,5 +75,7 @@ namespace LeoDeg.StateActions
         {
             currentState.OnLateUpdate (this);
         }
+
+        #endregion
     }
 }

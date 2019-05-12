@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03ccaac06b8f55c428be2c6d868af58d, type: 3}
-  m_Name: MouseScrollWheel
+  m_Script: {fileID: 11500000, guid: 58dc1c457720f1d418c95f250fe3839f, type: 3}
+  m_Name: Ammo
   m_EditorClassIdentifier: 
-  axisName: Mouse ScrollWheel
-  value: 0
-  debugValueToConsole: 0
+  prefab: {fileID: 9070832666984837698, guid: 7c0b6b6c252688644abd38fcf393615f, type: 3}
+  maxCarryingAmount: 500
+  damage: 10

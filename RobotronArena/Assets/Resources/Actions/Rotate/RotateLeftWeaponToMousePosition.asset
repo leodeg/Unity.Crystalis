@@ -15,7 +15,7 @@ MonoBehaviour:
   position: {fileID: 11400000, guid: 11cfe797a5f5b4a4cb726ccb0cacd8be, type: 2}
   target: {fileID: 11400000, guid: 3c837fcfd94a4c2469d625786fdf5fd9, type: 2}
   deltaTime: {fileID: 11400000, guid: 2043598953651fe41a0e40e8e7f593ce, type: 2}
-  rotationSpeed: 2.5
+  rotationSpeed: 2
   slowRotationSpeed: 1
   minDistance: 1
   freezeYRotation: 0
