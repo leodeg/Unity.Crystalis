@@ -115,7 +115,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 849302408661024899}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.656}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 849302408681981858}
@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 849302408681981856}
   - component: {fileID: 849302408681981859}
   - component: {fileID: 849302408681981870}
+  - component: {fileID: 2900231994975757279}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -228,3 +229,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptableVariable: {fileID: 11400000, guid: a312a4a5218abd94a8fb9af31796e46d, type: 2}
+--- !u!114 &2900231994975757279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849302408681981861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 478f74cd0a2321c43be35ed316ba635a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  muzzle: {fileID: 849302408661024896}
+  bullet: {fileID: -4652154185065144992, guid: 7c0b6b6c252688644abd38fcf393615f, type: 3}
+  timeBetweenShots: 100
+  muzzleVelocity: 35

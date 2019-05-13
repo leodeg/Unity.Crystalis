@@ -6,6 +6,6 @@ namespace LeoDeg.Properties
     [System.Serializable]
     public class Stats
     {
-        public int health;
+        public float health;
     }
 }

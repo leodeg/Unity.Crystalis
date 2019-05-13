@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonName: Fire1
   isPressed: 0
-  keyState: 0
+  keyState: 1
   updateVariable: 1
   scriptableVariable: {fileID: 11400000, guid: f59badfaec603ed458232d6c8c701042, type: 2}
+  debugValueToConsole: 0

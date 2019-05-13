@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.AI;
 
 namespace LeoDeg.Actions
 {
@@ -8,6 +9,8 @@ namespace LeoDeg.Actions
     {
         public Scriptables.NavMeshScriptable navMeshAgent;
         public Scriptables.TransformScriptable target;
+
+        public NavMeshAgent meshAgent;
 
         public override void Execute ()
         {

@@ -19,5 +19,6 @@ MonoBehaviour:
   onUpdate:
   - {fileID: 11400000, guid: 32968294c30433b45a36d173276bc29e, type: 2}
   - {fileID: 11400000, guid: 00764fa352b48ea4782bfc729a22581d, type: 2}
+  - {fileID: 11400000, guid: bd25ca9481e327649a598f88aba171c5, type: 2}
   onEnable: []
   onDisable: []
