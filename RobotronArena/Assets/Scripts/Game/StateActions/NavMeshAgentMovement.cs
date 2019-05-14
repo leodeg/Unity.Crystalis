@@ -12,8 +12,10 @@ namespace LeoDeg.StateActions
             if (state.meshAgentInstance == null)
             {
                 Debug.Log ("StateMachine:NavMeshAgentMovement: Navigation mesh agent is not assign.");
+                return;
             }
-            else
+
+            if (!state.stateProperties.isDead && !state.stateProperties.isAttacking)
             {
                 state.meshAgentInstance.SetDestination (target.value.position);
             }

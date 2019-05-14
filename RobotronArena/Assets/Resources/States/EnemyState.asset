@@ -18,5 +18,6 @@ MonoBehaviour:
   onLateUpdate: []
   onUpdate:
   - {fileID: 11400000, guid: dd305a18b4292db4794bd1e027b78b27, type: 2}
+  - {fileID: 11400000, guid: 1376fb2de2a7d854187fb9e66daf8adb, type: 2}
   onEnable: []
   onDisable: []

@@ -6,7 +6,7 @@ namespace LeoDeg.Properties
     [System.Serializable]
     public class StateProperties
     {
-        public bool isAiming;
+        public bool isAttacking;
         public bool isShooting;
         public bool isReloading;
         public bool isInteracting;

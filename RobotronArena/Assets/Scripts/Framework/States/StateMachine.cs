@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 namespace LeoDeg.StateActions
 {
@@ -14,26 +15,32 @@ namespace LeoDeg.StateActions
         public Scriptables.FloatScriptable deltaTime;
         public Scriptables.FloatScriptable fixedDeltaTime;
 
-        [Header ("Properties")]
-        public Stats statsProperties;
-        public StateProperties stateProperties;
-
         [Header ("Weapon")]
         public WeaponController weaponController;
 
         [Header ("Effects")]
         public string hitEffectsName;
 
-        [Header ("References")]
+        [Header ("Assign at Start")]
         public bool useNavMeshAgent = false;
+        public bool useRigidbody = false;
+        public bool useAnimator = false;
+
+        [Header ("References")]
         public NavMeshAgent meshAgentInstance;
+        public Rigidbody rigidbodyInstance;
+        public Animator animatorInstance;
+
+        [Header ("Properties")]
+        public Stats statsProperties;
+        public StateProperties stateProperties;
+
+        [Header ("Events")]
+        public UnityEvent OnDeath;
 
         [HideInInspector]
-        public Rigidbody rigidbodyInstance;
-        [HideInInspector]
-        public Animator animatorInstance;
-        [HideInInspector]
         public Transform transformInstance;
+
 
         #region State Machine Methods
 
@@ -49,13 +56,16 @@ namespace LeoDeg.StateActions
 
         private void Initialize ()
         {
-            rigidbodyInstance = GetComponent<Rigidbody> ();
             transformInstance = GetComponent<Transform> ();
-            animatorInstance = GetComponent<Animator> ();
+
+            if (useRigidbody)
+                rigidbodyInstance = GetComponent<Rigidbody> ();
+
+            if (useAnimator)
+                animatorInstance = GetComponent<Animator> ();
+
             if (useNavMeshAgent)
-            {
                 meshAgentInstance = GetComponent<NavMeshAgent> ();
-            }
         }
 
         #endregion
@@ -111,11 +121,27 @@ namespace LeoDeg.StateActions
         {
             statsProperties.health -= damage;
 
-            if (statsProperties.health < 0)
+            if (statsProperties.health <= 0)
             {
-                statsProperties.health = 0;
-                stateProperties.isDead = true;
+                Debug.Log ("StateMachine:TakeDamage: health: " + statsProperties.health);
+                Die ();
             }
+        }
+
+        private void Die ()
+        {
+            statsProperties.health = 0;
+            stateProperties.isDead = true;
+
+            Debug.Log ("StateMachine:Die");
+            if (OnDeath != null)
+            {
+                Debug.Log ("StateMachine:OnDeath");
+                OnDeath.Invoke ();
+            }
+
+
+            Destroy (this.gameObject);
         }
 
         #endregion

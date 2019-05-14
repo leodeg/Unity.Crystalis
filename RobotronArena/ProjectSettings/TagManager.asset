@@ -9,6 +9,7 @@ TagManager:
   - EnemyBullet
   - Obstacle
   - Floor
+  - SpawnManager
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - EnemyBullet
   - Floor
   - Obstacle
-  - 
+  - SpawnManager
   - 
   - 
   - 

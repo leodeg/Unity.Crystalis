@@ -18,4 +18,4 @@ MonoBehaviour:
   rotationSpeed: 4
   slowRotationSpeed: 1
   minDistance: 1
-  freezeYRotation: 0
+  freezeYRotation: 1
