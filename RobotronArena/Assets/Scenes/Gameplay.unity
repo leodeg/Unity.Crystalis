@@ -4163,6 +4163,7 @@ GameObject:
   - component: {fileID: 1367028463}
   - component: {fileID: 1367028466}
   - component: {fileID: 1367028464}
+  - component: {fileID: 1367028467}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -4264,15 +4265,21 @@ MonoBehaviour:
   weaponController: {fileID: 892626907}
   hitEffectsName: 
   useNavMeshAgent: 0
+  useBoxCollider: 1
   useRigidbody: 1
   useAnimator: 1
+  useMaterial: 0
+  useRenderer: 0
+  boxColliderInstance: {fileID: 0}
   meshAgentInstance: {fileID: 0}
   rigidbodyInstance: {fileID: 0}
   animatorInstance: {fileID: 0}
+  materialInstance: {fileID: 0}
+  rendererInstance: {fileID: 0}
   statsProperties:
     health: 0
   stateProperties:
-    isAiming: 0
+    isAttacking: 0
     isShooting: 0
     isReloading: 0
     isInteracting: 0
@@ -4283,6 +4290,11 @@ MonoBehaviour:
     vaultingFlag: 0
     healthChangeFlag: 0
   OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnDamage:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -4337,6 +4349,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: be5cd64d65c61d942a25d364a4496165, type: 2}
   onEnable: []
   onDisable: []
+--- !u!114 &1367028467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367028458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e918116e9c51c74b92e2e7c2615a6d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptableVariable: {fileID: 11400000, guid: 680a9159daa6a3942a3edd2b250a8f44, type: 2}
 --- !u!1 &1379732246
 GameObject:
   m_ObjectHideFlags: 0

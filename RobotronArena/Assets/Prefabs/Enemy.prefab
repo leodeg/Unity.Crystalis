@@ -133,11 +133,17 @@ MonoBehaviour:
   weaponController: {fileID: 0}
   hitEffectsName: 
   useNavMeshAgent: 1
+  useBoxCollider: 1
   useRigidbody: 0
   useAnimator: 0
+  useMaterial: 1
+  useRenderer: 0
+  boxColliderInstance: {fileID: 0}
   meshAgentInstance: {fileID: 0}
   rigidbodyInstance: {fileID: 0}
   animatorInstance: {fileID: 0}
+  materialInstance: {fileID: 2100000, guid: 8c918c06c56ff524d80738edf8da743b, type: 2}
+  rendererInstance: {fileID: 0}
   statsProperties:
     health: 50
   stateProperties:

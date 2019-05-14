@@ -23,13 +23,19 @@ namespace LeoDeg.StateActions
 
         [Header ("Assign at Start")]
         public bool useNavMeshAgent = false;
+        public bool useBoxCollider = false;
         public bool useRigidbody = false;
         public bool useAnimator = false;
+        public bool useMaterial = false;
+        public bool useRenderer = false;
 
         [Header ("References")]
+        public BoxCollider boxColliderInstance;
         public NavMeshAgent meshAgentInstance;
         public Rigidbody rigidbodyInstance;
         public Animator animatorInstance;
+        public Material materialInstance;
+        public Renderer rendererInstance;
 
         [Header ("Properties")]
         public Stats statsProperties;
@@ -37,6 +43,7 @@ namespace LeoDeg.StateActions
 
         [Header ("Events")]
         public UnityEvent OnDeath;
+        public UnityEvent OnDamage;
 
         [HideInInspector]
         public Transform transformInstance;
@@ -66,6 +73,15 @@ namespace LeoDeg.StateActions
 
             if (useNavMeshAgent)
                 meshAgentInstance = GetComponent<NavMeshAgent> ();
+
+            if (useMaterial)
+                materialInstance = GetComponent<Renderer> ().material;
+
+            if (useBoxCollider)
+                boxColliderInstance = GetComponent<BoxCollider> ();
+
+            if (useRenderer)
+                rendererInstance = GetComponent<Renderer> ();
         }
 
         #endregion

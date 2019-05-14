@@ -35,7 +35,7 @@ public class Bullet : MonoBehaviour
         Ray ray = new Ray (transform.position, transform.forward);
         RaycastHit hit;
 
-        if (Physics.Raycast (ray, out hit, collisionDistance, collisionMask, QueryTriggerInteraction.Collide))
+        if (Physics.Raycast (ray, out hit, collisionDistance + skinWidth, collisionMask, QueryTriggerInteraction.Collide))
         {
             OnHit (hit.collider, hit.point);
         }
