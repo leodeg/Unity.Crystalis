@@ -9,5 +9,9 @@ namespace LeoDeg.Properties
         public bool infiniteWaves;
         public int spawnCount;
         public float timeBetweenSpawns;
+        public int enemyDamage;
+        public float enemySpeed;
+        public float enemyHealth;
+        public Color skinColor;
     }
 }

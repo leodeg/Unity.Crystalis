@@ -14,7 +14,7 @@ namespace LeoDeg.Enemies
 
         public event System.Action<int> OnNewWave;
 
-        private WaveInfo currentWave;
+        private WaveInfo currentWaveInfo;
         private int waveCounter = 0;
         private int remainingToSpawn = 0;
         private int remainingToAlive = 0;
@@ -27,7 +27,7 @@ namespace LeoDeg.Enemies
 
         private void Update ()
         {
-            if (remainingToSpawn > 0 && Time.time > nextSpawnTime)
+            if ((remainingToSpawn > 0 || currentWaveInfo.infiniteWaves) && Time.time > nextSpawnTime)
             {
                 SpawnNewObject ();
             }
@@ -38,13 +38,23 @@ namespace LeoDeg.Enemies
             remainingToSpawn--;
             Debug.Log ("SpawnManager:SpawnNewObject: new object was spawned: " + remainingToSpawn);
 
-            nextSpawnTime = Time.time + currentWave.timeBetweenSpawns;
+            nextSpawnTime = Time.time + currentWaveInfo.timeBetweenSpawns;
+            SetWaveDifficulty (currentWaveInfo.enemySpeed, currentWaveInfo.enemyDamage, currentWaveInfo.enemyHealth, currentWaveInfo.skinColor);
+        }
+
+        public void SetWaveDifficulty (float moveSpeed, int enemyDamage, float enemyHealth, Color skinColor)
+        {
             int randomPoint = Random.Range (0, spawnPoints.Length - 1);
             GameObject spawned = Instantiate (prefab, spawnPoints[randomPoint].position, Quaternion.identity);
-
-            StateMachine stateMachine = spawned.GetComponent<StateMachine>();
+            StateMachine stateMachine = spawned.GetComponent<StateMachine> ();
+            
             if (stateMachine != null)
+            {
                 stateMachine.OnDeath.AddListener (OnObjectDestroy);
+                stateMachine.meshAgentInstance.speed = moveSpeed;
+                stateMachine.weaponController.SetRightWeaponDamage(enemyDamage);
+                stateMachine.materialInstance.color = skinColor;
+            }
         }
 
         public void OnPlayerDeath ()
@@ -68,8 +78,8 @@ namespace LeoDeg.Enemies
 
             if (waveCounter - 1 < waves.Length)
             {
-                currentWave = waves[waveCounter - 1];
-                remainingToSpawn = currentWave.spawnCount;
+                currentWaveInfo = waves[waveCounter - 1];
+                remainingToSpawn = currentWaveInfo.spawnCount;
                 remainingToAlive = remainingToSpawn;
 
                 if (OnNewWave != null)

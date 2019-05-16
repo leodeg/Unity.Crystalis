@@ -241,6 +241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 478f74cd0a2321c43be35ed316ba635a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootingEffect: {fileID: 5497185553438634675, guid: 7d952d1472644834ab7c17cb59325d82,
+    type: 3}
   muzzle: {fileID: 849302408661024896}
   bullet: {fileID: -4652154185065144992, guid: 7c0b6b6c252688644abd38fcf393615f, type: 3}
   timeBetweenShots: 100

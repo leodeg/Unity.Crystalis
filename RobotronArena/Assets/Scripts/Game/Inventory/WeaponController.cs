@@ -36,5 +36,31 @@ namespace LeoDeg.Inventories
             rightEquipedWeapon = Instantiate (weapon, rightWeaponHolder.position, rightWeaponHolder.rotation);
             rightEquipedWeapon.transform.parent = rightWeaponHolder;
         }
+
+        public float GetLeftWeaponDamage ()
+        {
+            return leftEquipedWeapon.GetDamage ();
+        }
+
+        public float GetRightWeaponDamage ()
+        {
+            return rightEquipedWeapon.GetDamage ();
+        }
+
+        public void SetRightWeaponDamage (float damage)
+        {
+            if (rightEquipedWeapon != null)
+            {
+                rightEquipedWeapon.damage = damage;
+            }
+        }
+
+        public void SetLeftWeaponDamage (float damage)
+        {
+            if (leftEquipedWeapon != null)
+            {
+                leftEquipedWeapon.damage = damage;
+            }
+        }
     }
 }

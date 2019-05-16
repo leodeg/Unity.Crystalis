@@ -15,7 +15,6 @@ namespace LeoDeg.StateActions
         public float timeBetweenAttacks = 1.5f;
         public float attackSpeed = 5f;
         public float skinWidth = 0.2f;
-        public float damage = 2f;
 
         [Header ("Colors")]
         public Color originalColor;
@@ -57,7 +56,7 @@ namespace LeoDeg.StateActions
                 if (percent >= 0.5f && !hasAppliedDamage)
                 {
                     hasAppliedDamage = true;
-                    targetHittable.value.TakeDamage (damage);
+                    targetHittable.value.TakeDamage (state.weaponController.GetRightWeaponDamage());
                 }
                 Debug.Log ("EnemyHandAttack:Start animation");
                 percent += state.deltaTime.value * attackSpeed;
