@@ -130,8 +130,11 @@ MonoBehaviour:
   currentState: {fileID: 11400000, guid: 818474938ee56c94a9f6cb5affe32f76, type: 2}
   deltaTime: {fileID: 11400000, guid: 2043598953651fe41a0e40e8e7f593ce, type: 2}
   fixedDeltaTime: {fileID: 11400000, guid: 2252e062714b00e4b84310aa41002bbc, type: 2}
+  resetPosition: {fileID: 0}
   weaponController: {fileID: 0}
   hitEffectsName: 
+  deathEffect: {fileID: 2993752147064167737, guid: 69d7e88450a87c945a2ae7fb19c718d8,
+    type: 3}
   useNavMeshAgent: 1
   useBoxCollider: 1
   useRigidbody: 0
@@ -158,6 +161,11 @@ MonoBehaviour:
     vaultingFlag: 0
     healthChangeFlag: 0
   OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnDamage:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,

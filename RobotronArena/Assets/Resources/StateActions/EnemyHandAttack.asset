@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: EnemyHandAttack
   m_EditorClassIdentifier: 
   target: {fileID: 11400000, guid: 75e738cc83441b242af5374c23068189, type: 2}
+  targetHittable: {fileID: 11400000, guid: 680a9159daa6a3942a3edd2b250a8f44, type: 2}
   attackDistanceThreashold: 1.5
   timeBetweenAttacks: 1
   attackSpeed: 1

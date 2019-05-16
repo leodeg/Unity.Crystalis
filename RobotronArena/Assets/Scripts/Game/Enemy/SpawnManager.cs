@@ -10,16 +10,19 @@ namespace LeoDeg.Enemies
         public WaveInfo[] waves;
         public Transform[] spawnPoints;
         public GameObject prefab;
+        public bool isDisabled;
+
+        public event System.Action<int> OnNewWave;
 
         private WaveInfo currentWave;
-        private int currentWaveCount = 0;
+        private int waveCounter = 0;
         private int remainingToSpawn = 0;
         private int remainingToAlive = 0;
         private float nextSpawnTime = 0f;
 
         private void Start ()
         {
-            NextSpawnWave ();
+            SpawnNextWave ();
         }
 
         private void Update ()
@@ -41,28 +44,36 @@ namespace LeoDeg.Enemies
 
             StateMachine stateMachine = spawned.GetComponent<StateMachine>();
             if (stateMachine != null)
-                stateMachine.OnDeath.AddListener (OnDeath);
+                stateMachine.OnDeath.AddListener (OnObjectDestroy);
         }
 
-        public void OnDeath ()
+        public void OnPlayerDeath ()
+        {
+            isDisabled = true;
+        }
+
+        public void OnObjectDestroy ()
         {
             remainingToAlive--;
             Debug.Log ("SpawnManager:OnDeath: remaining to alive: " + remainingToAlive);
 
             if (remainingToAlive < 1)
-                NextSpawnWave ();
+                SpawnNextWave ();
         }
 
-        private void NextSpawnWave ()
+        private void SpawnNextWave ()
         {
-            currentWaveCount++;
-            Debug.Log ("SpawnManager:NextWave: wave count: " + currentWaveCount);
+            waveCounter++;
+            Debug.Log ("SpawnManager:NextWave: wave count: " + waveCounter);
 
-            if (currentWaveCount - 1 < waves.Length)
+            if (waveCounter - 1 < waves.Length)
             {
-                currentWave = waves[currentWaveCount - 1];
+                currentWave = waves[waveCounter - 1];
                 remainingToSpawn = currentWave.spawnCount;
                 remainingToAlive = remainingToSpawn;
+
+                if (OnNewWave != null)
+                    OnNewWave.Invoke (waveCounter);
             }
             else
             {

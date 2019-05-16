@@ -14,12 +14,14 @@ namespace LeoDeg.StateActions
         public State currentState;
         public Scriptables.FloatScriptable deltaTime;
         public Scriptables.FloatScriptable fixedDeltaTime;
+        public Transform resetPosition;
 
         [Header ("Weapon")]
         public WeaponController weaponController;
 
         [Header ("Effects")]
         public string hitEffectsName;
+        public ParticleSystem deathEffect;
 
         [Header ("Assign at Start")]
         public bool useNavMeshAgent = false;
@@ -130,6 +132,7 @@ namespace LeoDeg.StateActions
 
         public void TakeHit (float damage, Vector3 hitPoint, Vector3 hitDirection)
         {
+            Destroy (Instantiate (deathEffect.gameObject, hitPoint, Quaternion.FromToRotation (Vector3.forward, hitDirection)), deathEffect.startLifetime);
             TakeDamage (damage);
         }
 
@@ -156,8 +159,14 @@ namespace LeoDeg.StateActions
                 OnDeath.Invoke ();
             }
 
-
             Destroy (this.gameObject);
+        }
+
+        public void ResetPosition ()
+        {
+            if (resetPosition != null)
+                transformInstance.position = resetPosition.position;
+            else Debug.Log ("StateMachine: reset position is not assign!");
         }
 
         #endregion

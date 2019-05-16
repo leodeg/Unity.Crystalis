@@ -15,6 +15,14 @@ public class Bullet : MonoBehaviour
 
     private void Start ()
     {
+        Destroy (gameObject, lifeTime);
+
+        Collider[] initialCollisions = Physics.OverlapSphere (transform.position, .1f, collisionMask);
+        if (initialCollisions.Length > 0)
+        {
+            OnHit (initialCollisions[0], transform.position);
+        }
+
         GetComponent<TrailRenderer> ().material.SetColor ("_BulletColor", trailColor);
     }
 
