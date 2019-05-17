@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3fe54f1b6367584096a159c786c7999, type: 3}
-  m_Name: RotateRightWeaponToMousePosition
+  m_Script: {fileID: 11500000, guid: 09747407c493fd64b8228a95cddf34de, type: 3}
+  m_Name: MoveCrosshairToMousePosition
   m_EditorClassIdentifier: 
-  position: {fileID: 11400000, guid: 11cfe797a5f5b4a4cb726ccb0cacd8be, type: 2}
-  target: {fileID: 11400000, guid: a312a4a5218abd94a8fb9af31796e46d, type: 2}
+  target: {fileID: 11400000, guid: 9ccd3cfd2b14fe0498e77df9e68eb27c, type: 2}
+  targetPosition: {fileID: 11400000, guid: 04096b5deb888a142b300b099455e11b, type: 2}
+  freezeYPos: 1
+  yPos: 0.7
+  useLerp: 0
   deltaTime: {fileID: 11400000, guid: 2043598953651fe41a0e40e8e7f593ce, type: 2}
-  rotationSpeed: 4
-  slowRotationSpeed: 0
-  minDistance: 2.5
-  freezeYRotation: 1
+  speed: 5

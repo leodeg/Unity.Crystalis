@@ -20,6 +20,10 @@ namespace LeoDeg.StateActions
             {
                 state.weaponController.rightEquipedWeapon.Shoot ();
             }
+
+            state.weaponController.leftEquipedWeapon.transform.localPosition = Vector3.Lerp (state.weaponController.leftEquipedWeapon.transform.localPosition, Vector3.zero, 0.1f);
+
+            state.weaponController.rightEquipedWeapon.transform.localPosition = Vector3.Lerp (state.weaponController.rightEquipedWeapon.transform.localPosition, Vector3.zero, 0.1f);
         }
     }
 }

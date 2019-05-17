@@ -16,6 +16,6 @@ MonoBehaviour:
   cameraRayLength: 100
   hitMask:
     serializedVersion: 2
-    m_Bits: 4864
+    m_Bits: 4096
   useCustomCamera: 0
   customCamera: {fileID: 0}

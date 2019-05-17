@@ -26,7 +26,7 @@ namespace LeoDeg.Actions
             if (freezeYRotation)
                 direction.y = 0;
 
-            if (minDistance < direction.magnitude)
+            if (minDistance < direction.sqrMagnitude)
                 currentSpeed = rotationSpeed;
             else currentSpeed = slowRotationSpeed;
 

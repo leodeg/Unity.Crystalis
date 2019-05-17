@@ -247,3 +247,5 @@ MonoBehaviour:
   bullet: {fileID: -4652154185065144992, guid: 7c0b6b6c252688644abd38fcf393615f, type: 3}
   timeBetweenShots: 100
   muzzleVelocity: 35
+  damage: 0
+  maxRecoilForce: 0.3
