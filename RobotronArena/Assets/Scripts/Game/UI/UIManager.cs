@@ -9,6 +9,11 @@ namespace LeoDeg.UI
 {
     internal class UIManager : MonoBehaviour
     {
+        [Header ("Scenes names")]
+        public string gameName = "Gameplay";
+        public string menuName = "Menu";
+
+
         [Header ("Objects References")]
         public Scriptables.StateMachineScriptable playerStateMachine;
         public SpawnManager spawner;
@@ -30,7 +35,7 @@ namespace LeoDeg.UI
 
         private void Awake ()
         {
-            //spawner.OnNewWave += OnNewWave;
+            spawner.OnNewWave += OnNewWave;
         }
 
         public void Start ()
@@ -40,7 +45,15 @@ namespace LeoDeg.UI
 
         private void Update ()
         {
+            scoreUI.text = playerStateMachine.value.statsProperties.GetScore().ToString ();
+            //float healthPercent = 0;
 
+            //if (playerStateMachine.value != null)
+            //{
+            //    healthPercent = playerStateMachine.value.statsProperties.GetHealth() / playerStateMachine.value.statsProperties.GetStartHealth ();
+            //}
+
+            //healthBar.localScale = new Vector3 (healthPercent, 1, 1);
         }
 
         private void OnNewWave (int waveNumber)
@@ -68,9 +81,9 @@ namespace LeoDeg.UI
             StartCoroutine (Fade (Color.clear, new Color (0, 0, 0, .95f), 1));
 
             //Debug.Log ("GameUI:: End animation" + gameOverScreen.activeSelf);
-            //gameOverScoreUI.text = scoreUI.text;
+            gameOverScoreUI.text = scoreUI.text;
             //healthBar.transform.parent.gameObject.SetActive (false);
-            //scoreUI.gameObject.SetActive (false);
+            scoreUI.gameObject.SetActive (false);
 
             gameOverScreen.SetActive (true);
             Debug.Log ("GameUI::GameOverScreen:: is active " + gameOverScreen.activeSelf);
@@ -91,25 +104,20 @@ namespace LeoDeg.UI
 
         IEnumerator AnimateNewWaveBanner ()
         {
-
             float delayTime = 1.5f;
             float speed = 3f;
             float animatePercent = 0;
             int dir = 1;
 
             float endDelayTime = Time.time + 1 / speed + delayTime;
-
             while (animatePercent >= 0)
             {
                 animatePercent += Time.deltaTime * speed * dir;
-
                 if (animatePercent >= 1)
                 {
                     animatePercent = 1;
                     if (Time.time > endDelayTime)
-                    {
                         dir = -1;
-                    }
                 }
 
                 newWaveBanner.anchoredPosition = Vector2.up * Mathf.Lerp (-170, 45, animatePercent);
@@ -120,12 +128,12 @@ namespace LeoDeg.UI
 
         public void StartNewGame ()
         {
-            SceneManager.LoadScene ("Game");
+            SceneManager.LoadScene (gameName);
         }
 
         public void ReturnToMainMenu ()
         {
-            SceneManager.LoadScene ("Menu");
+            SceneManager.LoadScene (menuName);
         }
     }
 }

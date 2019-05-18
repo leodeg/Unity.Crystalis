@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using LeoDeg.Managers;
 
 namespace LeoDeg.Inventories
 {
@@ -12,6 +13,9 @@ namespace LeoDeg.Inventories
         public float muzzleVelocity = 35;
         public float damage;
         public float maxRecoilForce = 0.7f;
+
+        public AudioClip reloadAudio;
+        public AudioClip shootAudio;
 
         private float nextShotTime;
 
@@ -28,7 +32,14 @@ namespace LeoDeg.Inventories
                 Destroy (Instantiate (shootingEffect.gameObject, muzzle.position, Quaternion.FromToRotation (Vector3.forward, muzzle.forward)), shootingEffect.startLifetime);
 
                 transform.localPosition -= Vector3.forward * Random.Range (0f, maxRecoilForce);
+
+                AudioManager.Instance.PlaySound (shootAudio, muzzle.position);
             }
+        }
+
+        public void Reload ()
+        {
+            AudioManager.Instance.PlaySound (reloadAudio, this.transform.position);
         }
 
         public float GetDamage ()

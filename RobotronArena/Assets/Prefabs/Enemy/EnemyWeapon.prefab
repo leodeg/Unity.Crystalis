@@ -49,3 +49,6 @@ MonoBehaviour:
   timeBetweenShots: 100
   muzzleVelocity: 35
   damage: 5
+  maxRecoilForce: 0.7
+  reloadAudio: {fileID: 0}
+  shootAudio: {fileID: 8300000, guid: 05e30b34dc04fa14ca2c0a527449ed2c, type: 3}

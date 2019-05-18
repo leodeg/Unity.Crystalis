@@ -18,6 +18,8 @@ namespace LeoDeg.Actions
 
         public override void Execute ()
         {
+            if (target.value == null) return;
+
             Vector3 targetPosition = target.value.position + offset;
          
             if (!useCustomCamera)

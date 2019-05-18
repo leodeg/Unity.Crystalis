@@ -15,9 +15,12 @@ namespace LeoDeg.StateActions
                 return;
             }
 
-            if (!state.stateProperties.isDead && !state.stateProperties.isAttacking)
+            if (target.value != null)
             {
-                state.meshAgentInstance.SetDestination (target.value.position);
+                if (!state.stateProperties.isDead && !state.stateProperties.isAttacking)
+                {
+                    state.meshAgentInstance.SetDestination (target.value.position);
+                }
             }
         }
     }

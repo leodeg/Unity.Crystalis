@@ -214,6 +214,6 @@ MonoBehaviour:
     m_Bits: 12800
   trailColor: {r: 1, g: 0, b: 0.05047798, a: 0}
   speed: 10
-  damageAmount: 10
+  damageAmount: 5
   lifeTime: 3
   skinWidth: 0.1

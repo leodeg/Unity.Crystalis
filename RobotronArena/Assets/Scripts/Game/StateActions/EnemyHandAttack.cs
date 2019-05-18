@@ -24,6 +24,8 @@ namespace LeoDeg.StateActions
 
         public override void Execute (StateMachine state)
         {
+            if (target.value == null) return;
+
             Debug.Log ("EnemyHandAttack:Execute");
             nextAttackTime = 0;
             if (Time.time > nextAttackTime)

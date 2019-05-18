@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 849302408681981870}
   - component: {fileID: 2900231994975757279}
   m_Layer: 0
-  m_Name: Weapon
+  m_Name: PlayerWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -249,3 +249,5 @@ MonoBehaviour:
   muzzleVelocity: 35
   damage: 0
   maxRecoilForce: 0.3
+  reloadAudio: {fileID: 8300000, guid: 66073a71b402c9f4d9c60d9681df377d, type: 3}
+  shootAudio: {fileID: 8300000, guid: bf2f4fd3b0799994a96fe8bbec8ccffc, type: 3}

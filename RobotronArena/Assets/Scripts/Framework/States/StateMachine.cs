@@ -1,4 +1,5 @@
 ﻿using LeoDeg.Inventories;
+using LeoDeg.Managers;
 using LeoDeg.Properties;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,8 +21,9 @@ namespace LeoDeg.StateActions
         public WeaponController weaponController;
 
         [Header ("Effects")]
-        public string hitEffectsName;
         public ParticleSystem deathEffect;
+        public AudioClip deathSound;
+        public AudioClip takeHitSound;
 
         [Header ("Assign at Start")]
         public bool useNavMeshAgent = false;
@@ -132,24 +134,30 @@ namespace LeoDeg.StateActions
 
         public void TakeHit (float damage, Vector3 hitPoint, Vector3 hitDirection)
         {
+            if (takeHitSound != null)
+                AudioManager.Instance.PlaySound (takeHitSound, hitPoint);
+
             Destroy (Instantiate (deathEffect.gameObject, hitPoint, Quaternion.FromToRotation (Vector3.forward, hitDirection)), deathEffect.startLifetime);
             TakeDamage (damage);
         }
 
         public void TakeDamage (float damage)
         {
-            statsProperties.health -= damage;
+            statsProperties.AddHealth (-damage);
 
-            if (statsProperties.health <= 0)
+            if (statsProperties.GetHealth () <= 0)
             {
-                Debug.Log ("StateMachine:TakeDamage: health: " + statsProperties.health);
+                Debug.Log ("StateMachine:TakeDamage: health: " + statsProperties.GetHealth ());
                 Die ();
             }
         }
 
         private void Die ()
         {
-            statsProperties.health = 0;
+            if (deathSound != null)
+                AudioManager.Instance.PlaySound2D (deathSound);
+
+            statsProperties.SetHealth (0);
             stateProperties.isDead = true;
 
             Debug.Log ("StateMachine:Die");

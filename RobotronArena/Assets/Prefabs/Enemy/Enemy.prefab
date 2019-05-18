@@ -185,6 +185,8 @@ MonoBehaviour:
   hitEffectsName: 
   deathEffect: {fileID: 2993752147064167737, guid: 69d7e88450a87c945a2ae7fb19c718d8,
     type: 3}
+  deathSound: {fileID: 8300000, guid: 62366b8d2c37a49dca550841c741317f, type: 3}
+  takeHitSound: {fileID: 8300000, guid: 1d4840678e677424b8921716c72397ea, type: 3}
   useNavMeshAgent: 1
   useBoxCollider: 1
   useRigidbody: 0
@@ -198,7 +200,9 @@ MonoBehaviour:
   materialInstance: {fileID: 2100000, guid: 8c918c06c56ff524d80738edf8da743b, type: 2}
   rendererInstance: {fileID: 0}
   statsProperties:
-    health: 50
+    startHealth: 0
+    currentHealth: 0
+    score: 0
   stateProperties:
     isAttacking: 0
     isShooting: 0
@@ -271,3 +275,5 @@ MonoBehaviour:
   muzzleVelocity: 35
   damage: 5
   maxRecoilForce: 0.7
+  reloadAudio: {fileID: 0}
+  shootAudio: {fileID: 0}
