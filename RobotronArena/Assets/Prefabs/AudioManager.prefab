@@ -87,6 +87,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deltaTime: {fileID: 11400000, guid: 2043598953651fe41a0e40e8e7f593ce, type: 2}
   playerTransform: {fileID: 11400000, guid: 75e738cc83441b242af5374c23068189, type: 2}
+  isPlaying: 0
+  masterVolume: 1
+  sfxVolume: 0.5
+  musicVolume: 0.2
 --- !u!114 &1512894882
 MonoBehaviour:
   m_ObjectHideFlags: 0

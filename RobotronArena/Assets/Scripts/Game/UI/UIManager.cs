@@ -31,10 +31,13 @@ namespace LeoDeg.UI
         public Text scoreText;
         public Text gameOverScoreText;
         public Text healthText;
+        public Text waveText;
+        public Text enemiesText;
 
 
         private void Awake ()
         {
+            spawner = FindObjectOfType<SpawnManager> ();
             spawner.OnNewWave += OnNewWave;
         }
 
@@ -45,12 +48,24 @@ namespace LeoDeg.UI
 
         private void Update ()
         {
-            scoreText.text = string.Format("Score: {0}", playerStateMachine.value.statsProperties.GetScore().ToString ());
-            healthText.text = string.Format("Health: {0}", playerStateMachine.value.statsProperties.GetHealth ().ToString ());
+            scoreText.text = string.Format ("Kills: {0}", playerStateMachine.value.statsProperties.GetScore ().ToString ());
+            healthText.text = string.Format ("Health: {0}", playerStateMachine.value.statsProperties.GetHealth ().ToString ());
+            waveText.text = string.Format ("Wave: {0}/{1}", spawner.GetWaveCount (), spawner.GetTotalWaveCount ());
+            enemiesText.text = string.Format ("Enemies: {0}/{1}", spawner.GetAliveEnemyCount (), spawner.GetTotalEnemiesCount ());
+        }
+
+        private void LateUpdate ()
+        {
+            if (spawner.GetWaveCount () == spawner.GetTotalWaveCount () && spawner.GetAliveEnemyCount () == 0)
+            {
+                OnGameOver ();
+            }
         }
 
         private void OnNewWave (int waveNumber)
         {
+            playerStateMachine.value.statsProperties.AddHealth (20);
+
             string[] numbers = { "One", "Two", "Three", "Four", "Five" };
             newWaveTitle.text = "- Wave " + numbers[waveNumber - 1] + " -";
 
@@ -91,10 +106,10 @@ namespace LeoDeg.UI
             }
         }
 
-        IEnumerator AnimateNewWaveBanner ()
+        private IEnumerator AnimateNewWaveBanner ()
         {
-            float delayTime = 1.5f;
-            float speed = 3f;
+            float delayTime = 3f;
+            float speed = 2.5f;
             float animatePercent = 0;
             int dir = 1;
 

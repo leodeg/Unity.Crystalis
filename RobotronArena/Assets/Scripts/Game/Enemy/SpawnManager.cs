@@ -33,6 +33,26 @@ namespace LeoDeg.Enemies
             }
         }
 
+        public int GetWaveCount ()
+        {
+            return waveCounter;
+        }
+
+        public int GetTotalWaveCount ()
+        {
+            return waves.Length;
+        }
+
+        public int GetAliveEnemyCount ()
+        {
+            return remainingToAlive;
+        }
+
+        public int GetTotalEnemiesCount ()
+        {
+            return currentWaveInfo.spawnCount;
+        }
+
         private void SpawnNewObject ()
         {
             remainingToSpawn--;

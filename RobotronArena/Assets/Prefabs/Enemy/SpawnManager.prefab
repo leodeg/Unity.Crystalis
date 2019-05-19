@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 1863876310557701114}
   m_Layer: 0
   m_Name: SpawnManager
-  m_TagString: Untagged
+  m_TagString: SpawnManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,18 +75,90 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - spawnCount: 3
+  - infiniteWaves: 0
+    spawnCount: 20
     timeBetweenSpawns: 1
-  - spawnCount: 3
+    enemyDamage: 5
+    enemySpeed: 4
+    enemyHealth: 50
+    skinColor: {r: 1, g: 0.95027566, b: 0.7028302, a: 0}
+  - infiniteWaves: 0
+    spawnCount: 20
     timeBetweenSpawns: 1
-  - spawnCount: 3
+    enemyDamage: 5
+    enemySpeed: 4
+    enemyHealth: 75
+    skinColor: {r: 1, g: 0.9490197, b: 0.7019608, a: 1}
+  - infiniteWaves: 0
+    spawnCount: 15
     timeBetweenSpawns: 1
+    enemyDamage: 7
+    enemySpeed: 6
+    enemyHealth: 85
+    skinColor: {r: 1, g: 0.6236605, b: 0, a: 0}
+  - infiniteWaves: 0
+    spawnCount: 20
+    timeBetweenSpawns: 1
+    enemyDamage: 7
+    enemySpeed: 5.5
+    enemyHealth: 85
+    skinColor: {r: 1, g: 0.62352943, b: 0, a: 1}
+  - infiniteWaves: 0
+    spawnCount: 15
+    timeBetweenSpawns: 1
+    enemyDamage: 10
+    enemySpeed: 6.5
+    enemyHealth: 85
+    skinColor: {r: 1, g: 0.2216981, b: 0.96069175, a: 0}
+  - infiniteWaves: 0
+    spawnCount: 20
+    timeBetweenSpawns: 1
+    enemyDamage: 10
+    enemySpeed: 6.5
+    enemyHealth: 85
+    skinColor: {r: 1, g: 0.22352943, b: 0.9607844, a: 1}
+  - infiniteWaves: 0
+    spawnCount: 10
+    timeBetweenSpawns: 1
+    enemyDamage: 3
+    enemySpeed: 7
+    enemyHealth: 100
+    skinColor: {r: 0.6273585, g: 1, b: 0.73495495, a: 0}
+  - infiniteWaves: 0
+    spawnCount: 20
+    timeBetweenSpawns: 0.7
+    enemyDamage: 5
+    enemySpeed: 7
+    enemyHealth: 100
+    skinColor: {r: 0.627451, g: 1, b: 0.73333335, a: 1}
+  - infiniteWaves: 0
+    spawnCount: 20
+    timeBetweenSpawns: 1
+    enemyDamage: 5
+    enemySpeed: 8
+    enemyHealth: 125
+    skinColor: {r: 0.495283, g: 1, b: 0.98517513, a: 0}
+  - infiniteWaves: 0
+    spawnCount: 1
+    timeBetweenSpawns: 1
+    enemyDamage: 1
+    enemySpeed: 13
+    enemyHealth: 350
+    skinColor: {r: 1, g: 0.06132078, b: 0.085008964, a: 1}
+  - infiniteWaves: 0
+    spawnCount: 20
+    timeBetweenSpawns: 1
+    enemyDamage: 5
+    enemySpeed: 8
+    enemyHealth: 125
+    skinColor: {r: 0.49411768, g: 1, b: 0.9843138, a: 1}
   spawnPoints:
   - {fileID: 1863876310691078935}
   - {fileID: 1863876311290950089}
   - {fileID: 1863876311456982231}
   - {fileID: 1863876310262384950}
   prefab: {fileID: 8026113150361081160, guid: ffdba74a9341c7f4f9ac409417d6a28f, type: 3}
+  isDisabled: 0
 --- !u!1 &1863876310691079016
 GameObject:
   m_ObjectHideFlags: 0
