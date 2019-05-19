@@ -45,8 +45,8 @@ namespace LeoDeg.UI
 
         private void Update ()
         {
-            scoreText.text = playerStateMachine.value.statsProperties.GetScore().ToString ();
-            healthText.text = playerStateMachine.value.statsProperties.GetHealth ().ToString ();
+            scoreText.text = string.Format("Score: {0}", playerStateMachine.value.statsProperties.GetScore().ToString ());
+            healthText.text = string.Format("Health: {0}", playerStateMachine.value.statsProperties.GetHealth ().ToString ());
         }
 
         private void OnNewWave (int waveNumber)
@@ -71,12 +71,11 @@ namespace LeoDeg.UI
             Cursor.visible = true;
             StartCoroutine (Fade (Color.clear, new Color (0, 0, 0, .95f), 1));
 
-            gameOverScoreText.text = scoreText.text;
-            //healthBar.transform.parent.gameObject.SetActive (false);
-            scoreText.gameObject.SetActive (false);
+            healthText.transform.parent.gameObject.SetActive (false);
+            scoreText.transform.parent.gameObject.SetActive (false);
 
+            gameOverScoreText.text = scoreText.text;
             gameOverScreen.SetActive (true);
-            Debug.Log ("GameUI::GameOverScreen:: is active " + gameOverScreen.activeSelf);
         }
 
         private IEnumerator Fade (Color from, Color to, float time)
@@ -124,6 +123,11 @@ namespace LeoDeg.UI
         public void ReturnToMainMenu ()
         {
             SceneManager.LoadScene (menuName);
+        }
+
+        public void CloseGame ()
+        {
+            Application.Quit ();
         }
     }
 }
