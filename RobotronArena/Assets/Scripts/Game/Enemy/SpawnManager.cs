@@ -44,7 +44,7 @@ namespace LeoDeg.Enemies
 
         public void SetWaveDifficulty (float moveSpeed, int enemyDamage, float enemyHealth, Color skinColor)
         {
-            int randomPoint = Random.Range (0, spawnPoints.Length - 1);
+            int randomPoint = Random.Range (0, spawnPoints.Length);
             GameObject spawned = Instantiate (prefab, spawnPoints[randomPoint].position, Quaternion.identity);
             StateMachine stateMachine = spawned.GetComponent<StateMachine> ();
             

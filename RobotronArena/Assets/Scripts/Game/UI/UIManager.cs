@@ -28,9 +28,9 @@ namespace LeoDeg.UI
         public Text newWaveEnemyCount;
 
         [Header ("Game UI References")]
-        public Text scoreUI;
-        public Text gameOverScoreUI;
-        public RectTransform healthBar;
+        public Text scoreText;
+        public Text gameOverScoreText;
+        public Text healthText;
 
 
         private void Awake ()
@@ -45,15 +45,8 @@ namespace LeoDeg.UI
 
         private void Update ()
         {
-            scoreUI.text = playerStateMachine.value.statsProperties.GetScore().ToString ();
-            //float healthPercent = 0;
-
-            //if (playerStateMachine.value != null)
-            //{
-            //    healthPercent = playerStateMachine.value.statsProperties.GetHealth() / playerStateMachine.value.statsProperties.GetStartHealth ();
-            //}
-
-            //healthBar.localScale = new Vector3 (healthPercent, 1, 1);
+            scoreText.text = playerStateMachine.value.statsProperties.GetScore().ToString ();
+            healthText.text = playerStateMachine.value.statsProperties.GetHealth ().ToString ();
         }
 
         private void OnNewWave (int waveNumber)
@@ -75,15 +68,12 @@ namespace LeoDeg.UI
 
         private void OnGameOver ()
         {
-            //Debug.Log ("GameUI:: Player is Dead " + gameOverScreen.activeSelf);
-
             Cursor.visible = true;
             StartCoroutine (Fade (Color.clear, new Color (0, 0, 0, .95f), 1));
 
-            //Debug.Log ("GameUI:: End animation" + gameOverScreen.activeSelf);
-            gameOverScoreUI.text = scoreUI.text;
+            gameOverScoreText.text = scoreText.text;
             //healthBar.transform.parent.gameObject.SetActive (false);
-            scoreUI.gameObject.SetActive (false);
+            scoreText.gameObject.SetActive (false);
 
             gameOverScreen.SetActive (true);
             Debug.Log ("GameUI::GameOverScreen:: is active " + gameOverScreen.activeSelf);

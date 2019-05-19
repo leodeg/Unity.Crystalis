@@ -182,7 +182,6 @@ MonoBehaviour:
   fixedDeltaTime: {fileID: 11400000, guid: 2252e062714b00e4b84310aa41002bbc, type: 2}
   resetPosition: {fileID: 0}
   weaponController: {fileID: 2695031722440114869}
-  hitEffectsName: 
   deathEffect: {fileID: 2993752147064167737, guid: 69d7e88450a87c945a2ae7fb19c718d8,
     type: 3}
   deathSound: {fileID: 8300000, guid: 62366b8d2c37a49dca550841c741317f, type: 3}
@@ -216,7 +215,19 @@ MonoBehaviour:
     healthChangeFlag: 0
   OnDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3907179371744310407, guid: a6e3c8cc077ac8142b2653987bcc64ca,
+          type: 3}
+        m_MethodName: IncreaseScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   OnDamage:

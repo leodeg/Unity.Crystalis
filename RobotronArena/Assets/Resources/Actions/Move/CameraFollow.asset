@@ -17,4 +17,4 @@ MonoBehaviour:
   target: {fileID: 11400000, guid: 75e738cc83441b242af5374c23068189, type: 2}
   deltaTime: {fileID: 11400000, guid: 2043598953651fe41a0e40e8e7f593ce, type: 2}
   speed: 5
-  offset: {x: 0, y: 10, z: -10}
+  offset: {x: 0, y: 30, z: -25}

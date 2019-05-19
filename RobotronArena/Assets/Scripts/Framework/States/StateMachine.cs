@@ -86,6 +86,14 @@ namespace LeoDeg.StateActions
 
             if (useRenderer)
                 rendererInstance = GetComponent<Renderer> ();
+
+            statsProperties.SetScore (0);
+            statsProperties.SetHealth (100);
+
+            if (this.tag == "Enemy")
+            {
+                OnDeath.AddListener (GameObject.FindGameObjectWithTag ("Player").GetComponent<StateMachine> ().IncreaseScore);
+            }
         }
 
         #endregion
@@ -175,6 +183,12 @@ namespace LeoDeg.StateActions
             if (resetPosition != null)
                 transformInstance.position = resetPosition.position;
             else Debug.Log ("StateMachine: reset position is not assign!");
+        }
+
+        public void IncreaseScore ()
+        {
+            Debug.Log ("Increase Player Score");
+            statsProperties.AddScore (1);
         }
 
         #endregion
