@@ -21,17 +21,31 @@ namespace LeoDeg.StateActions
         public Color attackColor;
 
         private float nextAttackTime = 0;
+        private bool resetAttackTime = false;
+
+        private void OnEnable ()
+        {
+            nextAttackTime = 0;
+            resetAttackTime = false;
+        }
 
         public override void Execute (StateMachine state)
         {
             if (target.value == null) return;
 
-            Debug.Log ("EnemyHandAttack:Execute");
-            nextAttackTime = 0;
-            if (Time.time > nextAttackTime)
+            if (!resetAttackTime)
             {
-                float squaredDistanceToTarget = (target.value.position - state.transformInstance.position).sqrMagnitude;
-                if (squaredDistanceToTarget < Mathf.Pow (attackDistanceThreashold + skinWidth + state.boxColliderInstance.size.x, 2))
+                nextAttackTime = Time.time;
+                resetAttackTime = true;
+            }
+
+            float distanceToTarget = (target.value.position - state.transformInstance.position).magnitude;
+            if (distanceToTarget < attackDistanceThreashold + skinWidth + state.boxColliderInstance.size.x)
+            {
+                Debug.Log ("EnemyHandAttack:Execute");
+                //Debug.Log ("Time: " + Time.time);
+                Debug.Log ("Next Attack Time: " + nextAttackTime);
+                if (Time.time > nextAttackTime)
                 {
                     Debug.Log ("EnemyHandAttack:Start attack");
                     nextAttackTime = Time.time + timeBetweenAttacks;
@@ -58,7 +72,7 @@ namespace LeoDeg.StateActions
                 if (percent >= 0.5f && !hasAppliedDamage)
                 {
                     hasAppliedDamage = true;
-                    targetHittable.value.TakeDamage (state.weaponController.GetRightWeaponDamage());
+                    targetHittable.value.TakeDamage (state.weaponController.GetRightWeaponDamage ());
                 }
                 Debug.Log ("EnemyHandAttack:Start animation");
                 percent += state.deltaTime.value * attackSpeed;

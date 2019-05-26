@@ -56,7 +56,7 @@ namespace LeoDeg.Enemies
         private void SpawnNewObject ()
         {
             remainingToSpawn--;
-            Debug.Log ("SpawnManager:SpawnNewObject: new object was spawned: " + remainingToSpawn);
+            //Debug.Log ("SpawnManager:SpawnNewObject: new object was spawned: " + remainingToSpawn);
 
             nextSpawnTime = Time.time + currentWaveInfo.timeBetweenSpawns;
             SetWaveDifficulty (currentWaveInfo.enemySpeed, currentWaveInfo.enemyDamage, currentWaveInfo.enemyHealth, currentWaveInfo.skinColor);

@@ -66,7 +66,7 @@ namespace LeoDeg.UI
         {
             playerStateMachine.value.statsProperties.AddHealth (20);
 
-            string[] numbers = { "One", "Two", "Three", "Four", "Five" };
+            string[] numbers = { "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven" };
             newWaveTitle.text = "- Wave " + numbers[waveNumber - 1] + " -";
 
             string enemyCountString;
@@ -88,6 +88,8 @@ namespace LeoDeg.UI
 
             healthText.transform.parent.gameObject.SetActive (false);
             scoreText.transform.parent.gameObject.SetActive (false);
+            waveText.transform.parent.gameObject.SetActive (false);
+            enemiesText.transform.parent.gameObject.SetActive (false);
 
             gameOverScoreText.text = scoreText.text;
             gameOverScreen.SetActive (true);

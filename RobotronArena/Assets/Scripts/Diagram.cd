@@ -1,0 +1,621 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="LeoDeg.Actions.Action" Collapsed="true">
+    <Position X="8.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Actions\Action.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Actions.ActionBooleanSwitcher" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAgAQAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Actions\ActionBooleanSwitcher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Actions.ActionsUpdater" Collapsed="true">
+    <Position X="8.5" Y="1" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AQQAAAAAAiAAAEAAQAAACBAAAAAAAAAIAAAICAAACEA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Actions\ActionsUpdater.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Assign.AssignGameObject" Collapsed="true">
+    <Position X="28.5" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Assign\AssignGameObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Assign.AssignIHittable" Collapsed="true">
+    <Position X="26.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Assign\AssignIHittable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Assign.AssignNavMeshAgent" Collapsed="true">
+    <Position X="28.5" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Assign\AssignNavMeshAgent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Assign.AssignStateMachine" Collapsed="true">
+    <Position X="28.5" Y="1" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Assign\AssignStateMachine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Assign.AssignTransform" Collapsed="true">
+    <Position X="26.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Assign\AssignTransform.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Conditions.Condition" Collapsed="true">
+    <Position X="12.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Conditions\Condition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Inputs.InputAxis" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAQAAAAAAACAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Inputs\InputAxis.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Inputs.InputButton" Collapsed="true">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAQAAEAAAAAAAAAAAAAAAABACAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Inputs\InputButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Inputs.InputManager" Collapsed="true">
+    <Position X="7.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Inputs\InputManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Inputs.InputScriptableUpdater" Collapsed="true">
+    <Position X="7.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Inputs\InputScriptableUpdater.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Inputs.InputUpdater" Collapsed="true">
+    <Position X="22.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Inputs\InputUpdater.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Managers.AudioManager" Collapsed="true">
+    <Position X="22.75" Y="2.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="LeoDeg.Managers.AudioManager.AudioChannel" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Framework\Managers\AudioManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AASAAAgAAAEIAAAAIAAEABkAAAAAAACEQAAQCCAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Managers\AudioManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Managers.DeltaTimeManager" Collapsed="true">
+    <Position X="7.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Managers\DeltaTimeManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Managers.DestroyManager" Collapsed="true">
+    <Position X="22.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Managers\DestroyManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Managers.GameManagers" Collapsed="true">
+    <Position X="22.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIBAAAAAAAAAAAAAAAQAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Managers\GameManagers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Managers.GameObjectPoolManager" Collapsed="true">
+    <Position X="24.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAQAAAAgBBAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Managers\GameObjectPoolManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Managers.MusicManager" Collapsed="true">
+    <Position X="22.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAABAAAAACACAAAAAAAQAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Managers\MusicManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Managers.ObjectPool" Collapsed="true">
+    <Position X="24.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAECAAAAAAAIAAAAAAAAAAgAAAAAAAIA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Managers\ObjectPool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Managers.SoundLibrary" Collapsed="true">
+    <Position X="22.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAQAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Managers\SoundLibrary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Events.EventEditor" Collapsed="true">
+    <Position X="5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\Custom UI\EventEditor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Events.ConditionalEventOnBoolVariable" Collapsed="true">
+    <Position X="19.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgIAAIAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\Events\ConditionalEventOnBoolVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Events.ConditionalEventOnGameObjectState" Collapsed="true">
+    <Position X="19.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIQAIAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\Events\ConditionalEventOnGameObjectState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Events.DelayedEvent" Collapsed="true">
+    <Position X="5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\Events\DelayedEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Events.EventExecutionOnMonoBehaviour" Collapsed="true">
+    <Position X="20.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAIAAAAAAAAAAAABAAAAIAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\Events\EventExecutionOnMonoBehaviour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Events.GameEvent" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAIABAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\Events\GameEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Events.GameEventListener" Collapsed="true">
+    <Position X="4" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAFAAAABAAAAAAAAAAAAAAAAAAAgIAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\Events\GameEventListener.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Events.InstantiateObjectOnEvent" Collapsed="true">
+    <Position X="5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAABAAAAAAAAAAgAAAAAAEAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\Events\InstantiateObjectOnEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Events.OnFloatComparisonEvent" Collapsed="true">
+    <Position X="19.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAoAAAIAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\Events\OnFloatComparisonEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Events.OnIntegerComparisonEvent" Collapsed="true">
+    <Position X="19.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAoAAAIAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\Events\OnIntegerComparisonEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Events.OnNumberComparison" Collapsed="true">
+    <Position X="19.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAoQAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\Events\OnNumberComparison.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Events.OnScriptableNumbersComparison" Collapsed="true">
+    <Position X="19.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAg=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\Events\OnScriptableNumbersComparison.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StateObject.OnEnableExecuteEvent" Collapsed="true">
+    <Position X="10.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\Events\OnEnableExecuteEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.UI.UIPropertyUpdater" Collapsed="true">
+    <Position X="3" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAEABAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\UI\UIPropertyUpdater.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.UI.UpdateButtonInteractability" Collapsed="true">
+    <Position X="2" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAACAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\UI\UpdateButtonInteractability.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.UI.UpdateImage" Collapsed="true">
+    <Position X="2" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAACEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\UI\UpdateImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.UI.UpdateSlider" Collapsed="true">
+    <Position X="2" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\UI\UpdateSlider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.UI.UpdateText" Collapsed="true">
+    <Position X="2" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAASAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\UI\UpdateText.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.UI.UpdateToggle" Collapsed="true">
+    <Position X="2" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAIAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\UI\UpdateToggle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Scriptables.BoolScriptable" Collapsed="true">
+    <Position X="34.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAACAAAABCAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\Variables\BoolScriptable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Scriptables.FloatScriptable" Collapsed="true">
+    <Position X="34.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAABAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\Variables\FloatScriptable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Scriptables.GameObjectScriptable" Collapsed="true">
+    <Position X="31" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\Variables\GameObjectScriptable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Scriptables.IHittableScriptable" Collapsed="true">
+    <Position X="31" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\Variables\IHittableScriptable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Scriptables.IntScriptable" Collapsed="true">
+    <Position X="34.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAABAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\Variables\IntScriptable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Scriptables.NavMeshScriptable" Collapsed="true">
+    <Position X="32.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\Variables\NavMeshScriptable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Scriptables.NumberScriptable" Collapsed="true">
+    <Position X="34.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\Variables\NumberScriptable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Scriptables.SpriteScriptable" Collapsed="true">
+    <Position X="31" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\Variables\SpriteScriptable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Scriptables.StateMachineScriptable" Collapsed="true">
+    <Position X="32.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\Variables\StateMachineScriptable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Scriptables.StateScriptable" Collapsed="true">
+    <Position X="32.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\Variables\StateScriptable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Scriptables.StringScriptable" Collapsed="true">
+    <Position X="31" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAABAACAAAAAAAABAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\Variables\StringScriptable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Scriptables.TransformArrayScriptable" Collapsed="true">
+    <Position X="31" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAABAAAAAACAAAAACAABAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\Variables\TransformArrayScriptable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Scriptables.TransformScriptable" Collapsed="true">
+    <Position X="32.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAACAAAAAAAABAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\Variables\TransformScriptable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Scriptables.Vector3Scriptable" Collapsed="true">
+    <Position X="32.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\Scriptables\Variables\Vector3Scriptable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.StateActions.ActionToStateActionAdapter" Collapsed="true">
+    <Position X="16.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\States\ActionToStateActionAdapter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.StateActions.State" Collapsed="true">
+    <Position X="14.75" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAQAQAAEAAEAAACFAAAAAQAgAAAIAIDAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\States\State.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.StateActions.StateAction" Collapsed="true">
+    <Position X="15.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\States\StateAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.StateActions.StateActionBooleanSwitcher" Collapsed="true">
+    <Position X="16.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAgAQAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\States\StateActionBooleanSwitcher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.StateActions.StateBooleanSwitcher" Collapsed="true">
+    <Position X="16.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAgAQAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\States\StateBooleanSwitcher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.StateActions.StateConditionSwitcher" Collapsed="true">
+    <Position X="16.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAgAQAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\States\StateConditionSwitcher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.StateActions.StateMachine" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="1.75" Width="3" />
+    <Compartments>
+      <Compartment Name="Public" Collapsed="true" />
+      <Compartment Name="Private" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAQQiAAEDqFABQggIIDAIIJAAAcgAAAIEAECyAACCEA=</HashCode>
+      <FileName>Assets\Scripts\Framework\States\StateMachine.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LeoDeg.Actions.CameraFollow" Collapsed="true">
+    <Position X="10" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAAAAAAEAAAQAIAAAAAAAAQAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Game\Actions\CameraFollow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Actions.GetCursorPosition" Collapsed="true">
+    <Position X="10" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EBIAAAAAAAAAAgQAAAAAAAABAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Game\Actions\GetCursorPosition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Actions.MoveObjectViaInput" Collapsed="true">
+    <Position X="10" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAMAAAYAIAAAAAAAAQACAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Game\Actions\MoveObjectViaInput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Actions.MoveToPosition" Collapsed="true">
+    <Position X="10" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAEAAAQgIAAAAAAAAAAAASAAAAAAAQAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Game\Actions\MoveToPosition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Actions.NavMeshAgentMovement" Collapsed="true">
+    <Position X="10" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAIAABAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Game\Actions\NavMeshAgentMovement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Actions.RotateAction" Collapsed="true">
+    <Position X="10" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAQAIAAAAAAAAAAAAQAAAAAAQAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Game\Actions\RotateAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Actions.RotateToPosition" Collapsed="true">
+    <Position X="10" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEBAgQAIAAAIAAAAAAAABAAAABAAAAAAgA=</HashCode>
+      <FileName>Assets\Scripts\Game\Actions\RotateToPosition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Enemies.SpawnManager" Collapsed="true">
+    <Position X="22.75" Y="5.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AQQBggAAICAAAABACUAAABIAIAADAAAAAAJBAAIAAAA=</HashCode>
+      <FileName>Assets\Scripts\Game\Enemy\SpawnManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bullet" Collapsed="true">
+    <Position X="24.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAACAAQAAAAAAAABAAAAAAEQDACAAAAAAAAAE=</HashCode>
+      <FileName>Assets\Scripts\Game\Inventory\Bullet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Inventories.Weapon" Collapsed="true">
+    <Position X="24.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAgAhAQAAAAAACAAAAAAAIAACBAgQEAAQAA=</HashCode>
+      <FileName>Assets\Scripts\Game\Inventory\Weapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Inventories.WeaponController" Collapsed="true">
+    <Position X="24.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BBQAIAMAAAAAAQAAAAAAAAAAAAAIAAAAAEQAQAAQAAA=</HashCode>
+      <FileName>Assets\Scripts\Game\Inventory\WeaponController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Properties.MovementProperties" Collapsed="true">
+    <Position X="26.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAABQAAAAAAACAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Game\Properties\MovementProperties.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Properties.StateProperties" Collapsed="true">
+    <Position X="26.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAgAAgAAAAAAEAAIAAAAAAAAAJAABAAAAAgAAAMAAAA=</HashCode>
+      <FileName>Assets\Scripts\Game\Properties\StateProperties.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Properties.Stats" Collapsed="true">
+    <Position X="26.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAIAAAAAAAEAAABAIgAgiAAAQA=</HashCode>
+      <FileName>Assets\Scripts\Game\Properties\Stats.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.Properties.WaveInfo" Collapsed="true">
+    <Position X="24.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAwAAAAAAAgAAAAAAAAAAAEAAAAAAASAAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Game\Properties\WaveInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.StateActions.EnemyHandAttack" Collapsed="true">
+    <Position X="14" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAEAAQGIAAAAAAAAIAAAFBACAQAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Game\StateActions\EnemyHandAttack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.StateActions.MoveViaInput" Collapsed="true">
+    <Position X="14" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAQAAAAAAAAAAAACAQAAAAQAAIAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Game\StateActions\MoveViaInput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.StateActions.NavMeshAgentMovement" Collapsed="true">
+    <Position X="14" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Game\StateActions\NavMeshAgentMovement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.StateActions.RotateToPosition" Collapsed="true">
+    <Position X="14" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAgQAAAAAIAAAAAAAABAAAABAAAAAAgA=</HashCode>
+      <FileName>Assets\Scripts\Game\StateActions\RotateToPosition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.StateActions.WeaponShootStateAction" Collapsed="true">
+    <Position X="14" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAQAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Game\StateActions\WeaponShootStateAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.UI.MenuUIManager" Collapsed="true">
+    <Position X="23" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Game\UI\MenuUIManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeoDeg.UI.UIManager">
+    <Position X="22" Y="8" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAQABIAAECAgAUAiESgAJAAAAAQAACEEIAQAAAAEAGA=</HashCode>
+      <FileName>Assets\Scripts\Game\UI\UIManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="LeoDeg.Properties.IHittable" Collapsed="true">
+    <Position X="15.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAgAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Framework\States\IHittable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

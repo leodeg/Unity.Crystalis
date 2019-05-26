@@ -15,9 +15,8 @@ MonoBehaviour:
   target: {fileID: 11400000, guid: 75e738cc83441b242af5374c23068189, type: 2}
   targetHittable: {fileID: 11400000, guid: 680a9159daa6a3942a3edd2b250a8f44, type: 2}
   attackDistanceThreashold: 1.5
-  timeBetweenAttacks: 1
+  timeBetweenAttacks: 0.3
   attackSpeed: 1
-  skinWidth: 0.1
-  damage: 2
+  skinWidth: 0.2
   originalColor: {r: 1, g: 0.07075471, b: 0.07075471, a: 0}
   attackColor: {r: 0.2547826, g: 0.9811321, b: 0.023139905, a: 0}
