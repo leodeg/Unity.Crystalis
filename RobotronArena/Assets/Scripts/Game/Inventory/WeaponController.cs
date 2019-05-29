@@ -1,66 +1,53 @@
 ﻿using UnityEngine;
 using System.Collections;
+using LeoDeg.Managers;
 
 namespace LeoDeg.Inventories
 {
     public class WeaponController : MonoBehaviour
     {
-        public Transform leftWeaponHolder;
-        public Transform rightWeaponHolder;
-        public Weapon startingWeapon;
+        public ParticleSystem shootingEffect;
+        public Transform muzzle;
+        public Bullet bullet;
+        public float timeBetweenShots = 100;
+        public float muzzleVelocity = 35;
+        public float damage;
+        public float maxRecoilForce = 0.7f;
 
-        public Weapon leftEquipedWeapon;
-        public Weapon rightEquipedWeapon;
+        public AudioClip reloadAudio;
+        public AudioClip shootAudio;
 
-        public void Initialize ()
+        private float nextShotTime;
+
+        public void Shoot ()
         {
-            if (startingWeapon != null)
+            if (Time.time > nextShotTime)
             {
-                EquipLeftGun (startingWeapon);
-                EquipRightGun (startingWeapon);
+                nextShotTime = Time.time + timeBetweenShots / 1000;
+                Bullet newBullet = Instantiate (bullet, muzzle.position, muzzle.rotation);
+                newBullet.SetSpeed (muzzleVelocity);
+
+                Destroy (Instantiate (shootingEffect.gameObject, muzzle.position, Quaternion.FromToRotation (Vector3.forward, muzzle.forward)), shootingEffect.startLifetime);
+
+                transform.localPosition -= Vector3.forward * Random.Range (0f, maxRecoilForce);
+
+                AudioManager.Instance.PlaySound (shootAudio, muzzle.position);
             }
         }
 
-        public void EquipLeftGun (Weapon weapon)
+        public void ResetPosition ()
         {
-            if (leftEquipedWeapon != null)
-                Destroy (leftEquipedWeapon.gameObject);
-            leftEquipedWeapon = Instantiate (weapon, leftWeaponHolder.position, leftWeaponHolder.rotation);
-            leftEquipedWeapon.transform.parent = leftWeaponHolder;
+            transform.localPosition = Vector3.Lerp (transform.localPosition, Vector3.zero, 0.1f);
         }
 
-        public void EquipRightGun (Weapon weapon)
+        public void Reload ()
         {
-            if (rightEquipedWeapon != null)
-                Destroy (leftEquipedWeapon.gameObject);
-            rightEquipedWeapon = Instantiate (weapon, rightWeaponHolder.position, rightWeaponHolder.rotation);
-            rightEquipedWeapon.transform.parent = rightWeaponHolder;
+            AudioManager.Instance.PlaySound (reloadAudio, this.transform.position);
         }
 
-        public float GetLeftWeaponDamage ()
+        public float GetDamage ()
         {
-            return leftEquipedWeapon.GetDamage ();
-        }
-
-        public float GetRightWeaponDamage ()
-        {
-            return rightEquipedWeapon.GetDamage ();
-        }
-
-        public void SetRightWeaponDamage (float damage)
-        {
-            if (rightEquipedWeapon != null)
-            {
-                rightEquipedWeapon.damage = damage;
-            }
-        }
-
-        public void SetLeftWeaponDamage (float damage)
-        {
-            if (leftEquipedWeapon != null)
-            {
-                leftEquipedWeapon.damage = damage;
-            }
+            return bullet == null ? damage : bullet.damageAmount;
         }
     }
 }

@@ -4,47 +4,29 @@ using LeoDeg.Managers;
 
 namespace LeoDeg.Inventories
 {
-    public class Weapon : MonoBehaviour
+    [CreateAssetMenu (menuName = "LeoDeg/Items/Weapon")]
+    public class Weapon : Item
     {
-        public ParticleSystem shootingEffect;
-        public Transform muzzle;
-        public Bullet bullet;
-        public float timeBetweenShots = 100;
-        public float muzzleVelocity = 35;
-        public float damage;
-        public float maxRecoilForce = 0.7f;
-
-        public AudioClip reloadAudio;
-        public AudioClip shootAudio;
-
-        private float nextShotTime;
-
-        Vector3 recoilSmoothDamp;
-
-        public void Shoot ()
+        public class WeaponProperties
         {
-            if (Time.time > nextShotTime)
-            {
-                nextShotTime = Time.time + timeBetweenShots / 1000;
-                Bullet newBullet = Instantiate (bullet, muzzle.position, muzzle.rotation);
-                newBullet.SetSpeed (muzzleVelocity);
+            public GameObject modelInstance;
+            public WeaponController weaponController;
+        }
 
-                Destroy (Instantiate (shootingEffect.gameObject, muzzle.position, Quaternion.FromToRotation (Vector3.forward, muzzle.forward)), shootingEffect.startLifetime);
+        [Header ("Prefabs")]
+        public GameObject modelPrefab;
+        public WeaponProperties properties;
 
-                transform.localPosition -= Vector3.forward * Random.Range (0f, maxRecoilForce);
-
-                AudioManager.Instance.PlaySound (shootAudio, muzzle.position);
-            }
+        public void Initialize ()
+        {
+            properties = new WeaponProperties ();
+            properties.modelInstance = Instantiate (modelPrefab);
+            properties.weaponController = properties.modelInstance.GetComponent<WeaponController> ();
         }
 
         public void Reload ()
         {
-            AudioManager.Instance.PlaySound (reloadAudio, this.transform.position);
-        }
-
-        public float GetDamage ()
-        {
-            return bullet == null ? damage : bullet.damageAmount;
+            properties.weaponController.Reload ();
         }
     }
 }

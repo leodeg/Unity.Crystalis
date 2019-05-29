@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4813005065007836874}
-  - component: {fileID: 2695031722440114869}
   m_Layer: 9
   m_Name: WeaponController
   m_TagString: Untagged
@@ -32,23 +31,6 @@ Transform:
   m_Father: {fileID: 8026113150361081156}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2695031722440114869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2612007301454442681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1f7a091dc0dca4478e352fc9d4d69da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftWeaponHolder: {fileID: 0}
-  rightWeaponHolder: {fileID: 2519911709016660279}
-  startingWeapon: {fileID: 0}
-  leftEquipedWeapon: {fileID: 0}
-  rightEquipedWeapon: {fileID: 2466190843534348748}
 --- !u!1 &8026113150361081160
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +163,7 @@ MonoBehaviour:
   deltaTime: {fileID: 11400000, guid: 2043598953651fe41a0e40e8e7f593ce, type: 2}
   fixedDeltaTime: {fileID: 11400000, guid: 2252e062714b00e4b84310aa41002bbc, type: 2}
   resetPosition: {fileID: 0}
-  weaponController: {fileID: 2695031722440114869}
+  inventory: {fileID: 0}
   deathEffect: {fileID: 2993752147064167737, guid: 69d7e88450a87c945a2ae7fb19c718d8,
     type: 3}
   deathSound: {fileID: 8300000, guid: 62366b8d2c37a49dca550841c741317f, type: 3}
@@ -245,7 +227,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2519911709016660279}
-  - component: {fileID: 2466190843534348748}
   m_Layer: 9
   m_Name: RightWeapon
   m_TagString: Untagged
@@ -267,24 +248,3 @@ Transform:
   m_Father: {fileID: 4813005065007836874}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2466190843534348748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8497592685093439711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 478f74cd0a2321c43be35ed316ba635a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootingEffect: {fileID: 0}
-  muzzle: {fileID: 0}
-  bullet: {fileID: 0}
-  timeBetweenShots: 100
-  muzzleVelocity: 35
-  damage: 5
-  maxRecoilForce: 0.7
-  reloadAudio: {fileID: 0}
-  shootAudio: {fileID: 0}

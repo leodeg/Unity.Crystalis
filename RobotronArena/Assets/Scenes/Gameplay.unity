@@ -8555,7 +8555,31 @@ PrefabInstance:
       propertyPath: takeHitSound
       value: 
       objectReference: {fileID: 8300000, guid: 72e76810224064300b7d32e8322a5d12, type: 3}
-    m_RemovedComponents: []
+    - target: {fileID: 3907179371744310407, guid: a6e3c8cc077ac8142b2653987bcc64ca,
+        type: 3}
+      propertyPath: weaponController
+      value: 
+      objectReference: {fileID: 11400000, guid: 8944a7cf64a081743bce266b989a6497,
+        type: 2}
+    - target: {fileID: 3907179371744310407, guid: a6e3c8cc077ac8142b2653987bcc64ca,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 11400000, guid: 8944a7cf64a081743bce266b989a6497,
+        type: 2}
+    - target: {fileID: 3907179370070073778, guid: a6e3c8cc077ac8142b2653987bcc64ca,
+        type: 3}
+      propertyPath: m_Name
+      value: WeaponHandler
+      objectReference: {fileID: 0}
+    - target: {fileID: 8586028420518777692, guid: a6e3c8cc077ac8142b2653987bcc64ca,
+        type: 3}
+      propertyPath: shootingEffect
+      value: 
+      objectReference: {fileID: 5497185553438634675, guid: 7d952d1472644834ab7c17cb59325d82,
+        type: 3}
+    m_RemovedComponents:
+    - {fileID: 3907179370070073779, guid: a6e3c8cc077ac8142b2653987bcc64ca, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a6e3c8cc077ac8142b2653987bcc64ca, type: 3}
 --- !u!1001 &6856127009457367035
 PrefabInstance:

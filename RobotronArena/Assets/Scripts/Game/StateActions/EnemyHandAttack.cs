@@ -72,7 +72,7 @@ namespace LeoDeg.StateActions
                 if (percent >= 0.5f && !hasAppliedDamage)
                 {
                     hasAppliedDamage = true;
-                    targetHittable.value.TakeDamage (state.weaponController.GetRightWeaponDamage ());
+                    targetHittable.value.TakeDamage (state.inventory.GetRightWeaponDamage ());
                 }
                 Debug.Log ("EnemyHandAttack:Start animation");
                 percent += state.deltaTime.value * attackSpeed;

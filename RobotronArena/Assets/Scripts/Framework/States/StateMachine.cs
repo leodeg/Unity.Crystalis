@@ -18,7 +18,7 @@ namespace LeoDeg.StateActions
         public Transform resetPosition;
 
         [Header ("Weapon")]
-        public WeaponController weaponController;
+        public Inventory inventory;
 
         [Header ("Effects")]
         public ParticleSystem deathEffect;
@@ -93,6 +93,11 @@ namespace LeoDeg.StateActions
             if (this.tag == "Enemy")
             {
                 OnDeath.AddListener (GameObject.FindGameObjectWithTag ("Player").GetComponent<StateMachine> ().IncreaseScore);
+            }
+
+            if (inventory != null)
+            {
+                inventory.Initialize ();
             }
         }
 

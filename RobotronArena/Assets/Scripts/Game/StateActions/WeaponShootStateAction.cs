@@ -13,17 +13,16 @@ namespace LeoDeg.StateActions
         {
             if (leftMouse.isPressed)
             {
-                state.weaponController.leftEquipedWeapon.Shoot ();
+                state.inventory.ShootLeft ();
             }
 
             if (rightMouse.isPressed)
             {
-                state.weaponController.rightEquipedWeapon.Shoot ();
+                state.inventory.ShootRight ();
             }
 
-            state.weaponController.leftEquipedWeapon.transform.localPosition = Vector3.Lerp (state.weaponController.leftEquipedWeapon.transform.localPosition, Vector3.zero, 0.1f);
-
-            state.weaponController.rightEquipedWeapon.transform.localPosition = Vector3.Lerp (state.weaponController.rightEquipedWeapon.transform.localPosition, Vector3.zero, 0.1f);
+            state.inventory.ResetLeftWeaponPos ();
+            state.inventory.ResetRighttWeaponPos ();
         }
     }
 }

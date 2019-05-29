@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RotateRightWeaponToMousePosition
   m_EditorClassIdentifier: 
   position: {fileID: 11400000, guid: 11cfe797a5f5b4a4cb726ccb0cacd8be, type: 2}
-  target: {fileID: 11400000, guid: a312a4a5218abd94a8fb9af31796e46d, type: 2}
+  target: {fileID: 11400000, guid: 849092a3238da6844a4593d185ed32fd, type: 2}
   deltaTime: {fileID: 11400000, guid: 2043598953651fe41a0e40e8e7f593ce, type: 2}
   rotationSpeed: 4
   slowRotationSpeed: 0

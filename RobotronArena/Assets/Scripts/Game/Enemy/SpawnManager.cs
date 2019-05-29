@@ -72,7 +72,7 @@ namespace LeoDeg.Enemies
             {
                 stateMachine.OnDeath.AddListener (OnObjectDestroy);
                 stateMachine.meshAgentInstance.speed = moveSpeed;
-                stateMachine.weaponController.SetRightWeaponDamage(enemyDamage);
+                stateMachine.inventory.SetRightWeaponDamage(enemyDamage);
                 stateMachine.materialInstance.color = skinColor;
             }
         }
