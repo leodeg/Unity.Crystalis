@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f7a091dc0dca4478e352fc9d4d69da, type: 3}
+  m_Name: EnemyInventory
+  m_EditorClassIdentifier: 
+  leftWeaponHolder: {fileID: 0}
+  rightWeaponHolder: {fileID: 0}
+  startingWeapon: {fileID: 11400000, guid: e78f5d7bcec0f2840904f59914ad9112, type: 2}
+  leftEquipedWeapon: {fileID: 0}
+  rightEquipedWeapon: {fileID: 0}

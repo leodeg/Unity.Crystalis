@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3907179370070073780}
   m_Layer: 8
-  m_Name: WeaponController
+  m_Name: WeaponHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -466,11 +466,13 @@ MonoBehaviour:
   fixedDeltaTime: {fileID: 11400000, guid: 2252e062714b00e4b84310aa41002bbc, type: 2}
   resetPosition: {fileID: 4377497513098381037, guid: ce433813aa95c5c4d819aea68dd3879a,
     type: 3}
-  inventory: {fileID: 0}
+  inventory: {fileID: 11400000, guid: 8944a7cf64a081743bce266b989a6497, type: 2}
+  leftHand: {fileID: 3907179370747504576}
+  rightHand: {fileID: 3907179371622594827}
   deathEffect: {fileID: 4377497513098381038, guid: ce433813aa95c5c4d819aea68dd3879a,
     type: 3}
   deathSound: {fileID: 8300000, guid: d36a393bca4582043982db9089e1694f, type: 3}
-  takeHitSound: {fileID: 8300000, guid: 9922a12f34d0a084aab32de985459723, type: 3}
+  takeHitSound: {fileID: 8300000, guid: 72e76810224064300b7d32e8322a5d12, type: 3}
   useNavMeshAgent: 0
   useBoxCollider: 1
   useRigidbody: 1
@@ -486,7 +488,7 @@ MonoBehaviour:
   statsProperties:
     startHealth: 0
     currentHealth: 0
-    score: 0
+    score: 114
   stateProperties:
     isAttacking: 0
     isShooting: 0

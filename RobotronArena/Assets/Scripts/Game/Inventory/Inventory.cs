@@ -7,9 +7,6 @@ namespace LeoDeg.Inventories
     [CreateAssetMenu (menuName = "LeoDeg/Items/Inventory")]
     public class Inventory : ScriptableObject
     {
-        public Scriptables.TransformScriptable leftWeaponHolder;
-        public Scriptables.TransformScriptable rightWeaponHolder;
-
         public Weapon startingWeapon;
         public Weapon leftEquipedWeapon;
         public Weapon rightEquipedWeapon;
@@ -20,16 +17,16 @@ namespace LeoDeg.Inventories
             rightEquipedWeapon = null;
         }
 
-        public void Initialize ()
+        public void InitializeWeapon (Transform lefthand, Transform rightHand)
         {
             if (startingWeapon != null)
             {
-                EquipRightGun (startingWeapon);
-                EquipLeftGun (startingWeapon);
+                EquipRightGun (startingWeapon, rightHand);
+                EquipLeftGun (startingWeapon, lefthand);
             }
         }
 
-        public void EquipLeftGun (Weapon weapon)
+        public void EquipLeftGun (Weapon weapon, Transform position)
         {
             if (leftEquipedWeapon != null)
             {
@@ -39,12 +36,12 @@ namespace LeoDeg.Inventories
 
             leftEquipedWeapon = Instantiate(weapon);
             leftEquipedWeapon.Initialize ();
-            leftEquipedWeapon.properties.modelInstance.transform.parent = leftWeaponHolder.value;
-            leftEquipedWeapon.properties.modelInstance.transform.localPosition = leftWeaponHolder.value.localPosition;
-            leftEquipedWeapon.properties.modelInstance.transform.localEulerAngles = leftWeaponHolder.value.localEulerAngles;
+            leftEquipedWeapon.properties.modelInstance.transform.parent = position;
+            leftEquipedWeapon.properties.modelInstance.transform.localPosition = position.localPosition;
+            leftEquipedWeapon.properties.modelInstance.transform.localEulerAngles = position.localEulerAngles;
         }
 
-        public void EquipRightGun (Weapon weapon)
+        public void EquipRightGun (Weapon weapon, Transform position)
         {
             if (rightEquipedWeapon != null)
             {
@@ -54,9 +51,9 @@ namespace LeoDeg.Inventories
 
             rightEquipedWeapon = Instantiate(weapon);
             rightEquipedWeapon.Initialize ();
-            rightEquipedWeapon.properties.modelInstance.transform.parent = rightWeaponHolder.value;
-            rightEquipedWeapon.properties.modelInstance.transform.localPosition = rightWeaponHolder.value.localPosition;
-            rightEquipedWeapon.properties.modelInstance.transform.localEulerAngles = rightWeaponHolder.value.localEulerAngles;
+            rightEquipedWeapon.properties.modelInstance.transform.parent = position;
+            rightEquipedWeapon.properties.modelInstance.transform.localPosition = position.localPosition;
+            rightEquipedWeapon.properties.modelInstance.transform.localEulerAngles = position.localEulerAngles;
         }
 
         public void ShootRight ()

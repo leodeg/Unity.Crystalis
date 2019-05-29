@@ -19,6 +19,8 @@ namespace LeoDeg.StateActions
 
         [Header ("Weapon")]
         public Inventory inventory;
+        public Transform leftHand;
+        public Transform rightHand;
 
         [Header ("Effects")]
         public ParticleSystem deathEffect;
@@ -97,7 +99,7 @@ namespace LeoDeg.StateActions
 
             if (inventory != null)
             {
-                inventory.Initialize ();
+                inventory.InitializeWeapon (leftHand, rightHand);
             }
         }
 
