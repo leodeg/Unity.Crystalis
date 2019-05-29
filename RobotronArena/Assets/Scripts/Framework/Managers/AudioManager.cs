@@ -64,7 +64,7 @@ namespace LeoDeg.Managers
                 musicSources.loop = true;
                 musicSources.Play ();
                 musicSources.volume = musicVolume;
-                Debug.Log ("AudioManager:PlayMusic: is playing " + musicSources.isPlaying);
+                //Debug.Log ("AudioManager:PlayMusic: is playing " + musicSources.isPlaying);
             }
             else
             {
@@ -79,7 +79,7 @@ namespace LeoDeg.Managers
                 AudioSource.PlayClipAtPoint (sound, position, sfxVolume * masterVolume);
             else Debug.LogWarning ("AudioManager:PlaySound: Sound is null!");
 
-            Debug.Log ("AudioManager:PlaySound");
+            //Debug.Log ("AudioManager:PlaySound");
         }
 
         public void PlaySound2D (AudioClip sound)

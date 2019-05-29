@@ -42,12 +42,13 @@ namespace LeoDeg.StateActions
             float distanceToTarget = (target.value.position - state.transformInstance.position).magnitude;
             if (distanceToTarget < attackDistanceThreashold + skinWidth + state.boxColliderInstance.size.x)
             {
-                Debug.Log ("EnemyHandAttack:Execute");
+                //Debug.Log ("EnemyHandAttack:Execute");
                 //Debug.Log ("Time: " + Time.time);
-                Debug.Log ("Next Attack Time: " + nextAttackTime);
+                //Debug.Log ("Next Attack Time: " + nextAttackTime);
+
                 if (Time.time > nextAttackTime)
                 {
-                    Debug.Log ("EnemyHandAttack:Start attack");
+                    //Debug.Log ("EnemyHandAttack:Start attack");
                     nextAttackTime = Time.time + timeBetweenAttacks;
                     Attack (state);
                 }
@@ -57,7 +58,7 @@ namespace LeoDeg.StateActions
 
         private void Attack (StateMachine state)
         {
-            Debug.Log ("EnemyHandAttack:Attack method");
+            //Debug.Log ("EnemyHandAttack:Attack method");
             state.stateProperties.isAttacking = true;
             state.meshAgentInstance.enabled = false;
 
@@ -72,9 +73,9 @@ namespace LeoDeg.StateActions
                 if (percent >= 0.5f && !hasAppliedDamage)
                 {
                     hasAppliedDamage = true;
-                    targetHittable.value.TakeDamage (state.inventory.GetRightWeaponDamage ());
+                    targetHittable.value.TakeHit (state.inventory.GetRightWeaponDamage (), Vector3.zero, Vector3.zero);
                 }
-                Debug.Log ("EnemyHandAttack:Start animation");
+                //Debug.Log ("EnemyHandAttack:Start animation");
                 percent += state.deltaTime.value * attackSpeed;
                 //float interpolation = (-Mathf.Pow (percent, 2) + percent) * 4;
                 //state.transformInstance.position = Vector3.Lerp (originalPos, attackPos, interpolation);

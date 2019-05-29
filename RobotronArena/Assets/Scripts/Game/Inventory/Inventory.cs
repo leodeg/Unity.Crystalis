@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
 using System.Collections;
-using System;
+using UnityEngine;
 
 namespace LeoDeg.Inventories
 {
@@ -26,15 +26,17 @@ namespace LeoDeg.Inventories
             }
         }
 
+        #region Weapon Methods
+
         public void EquipLeftGun (Weapon weapon, Transform position)
         {
             if (leftEquipedWeapon != null)
             {
-                Destroy (leftEquipedWeapon.modelPrefab);
                 leftEquipedWeapon.properties = null;
+                Destroy (leftEquipedWeapon.modelPrefab.gameObject);
             }
 
-            leftEquipedWeapon = Instantiate(weapon);
+            leftEquipedWeapon = Instantiate (weapon);
             leftEquipedWeapon.Initialize ();
             leftEquipedWeapon.properties.modelInstance.transform.parent = position;
             leftEquipedWeapon.properties.modelInstance.transform.localPosition = position.localPosition;
@@ -45,11 +47,11 @@ namespace LeoDeg.Inventories
         {
             if (rightEquipedWeapon != null)
             {
-                Destroy (rightEquipedWeapon.modelPrefab);
                 rightEquipedWeapon.properties = null;
+                Destroy (rightEquipedWeapon.modelPrefab.gameObject);
             }
 
-            rightEquipedWeapon = Instantiate(weapon);
+            rightEquipedWeapon = Instantiate (weapon);
             rightEquipedWeapon.Initialize ();
             rightEquipedWeapon.properties.modelInstance.transform.parent = position;
             rightEquipedWeapon.properties.modelInstance.transform.localPosition = position.localPosition;
@@ -59,17 +61,13 @@ namespace LeoDeg.Inventories
         public void ShootRight ()
         {
             if (rightEquipedWeapon != null)
-            {
                 rightEquipedWeapon.properties.weaponController.Shoot ();
-            }
         }
 
         public void ShootLeft ()
         {
             if (leftEquipedWeapon != null)
-            {
                 leftEquipedWeapon.properties.weaponController.Shoot ();
-            }
         }
 
         public float GetLeftWeaponDamage ()
@@ -85,33 +83,27 @@ namespace LeoDeg.Inventories
         public void SetRightWeaponDamage (float damage)
         {
             if (rightEquipedWeapon != null)
-            {
                 rightEquipedWeapon.properties.weaponController.damage = damage;
-            }
         }
 
         public void SetLeftWeaponDamage (float damage)
         {
             if (leftEquipedWeapon != null)
-            {
                 leftEquipedWeapon.properties.weaponController.damage = damage;
-            }
         }
 
         public void ResetLeftWeaponPos ()
         {
             if (leftEquipedWeapon != null)
-            {
                 leftEquipedWeapon.properties.weaponController.ResetPosition ();
-            }
         }
 
-        public void ResetRighttWeaponPos ()
+        public void ResetRightWeaponPos ()
         {
             if (rightEquipedWeapon != null)
-            {
                 rightEquipedWeapon.properties.weaponController.ResetPosition ();
-            }
         }
+
+        #endregion
     }
 }

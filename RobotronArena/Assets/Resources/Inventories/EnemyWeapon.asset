@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 478f74cd0a2321c43be35ed316ba635a, type: 3}
   m_Name: EnemyWeapon
   m_EditorClassIdentifier: 
-  modelPrefab: {fileID: 8248192446385268917, guid: 786e7db5b5ca5d5498b365dba3900a39,
+  modelPrefab: {fileID: 6952621841770972741, guid: 19bd15cee4e28d24a83dec4ba48b218b,
     type: 3}

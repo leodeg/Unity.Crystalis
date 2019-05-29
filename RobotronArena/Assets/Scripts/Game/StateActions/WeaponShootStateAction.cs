@@ -22,7 +22,7 @@ namespace LeoDeg.StateActions
             }
 
             state.inventory.ResetLeftWeaponPos ();
-            state.inventory.ResetRighttWeaponPos ();
+            state.inventory.ResetRightWeaponPos ();
         }
     }
 }

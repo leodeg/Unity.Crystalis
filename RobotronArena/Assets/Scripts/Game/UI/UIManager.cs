@@ -1,4 +1,4 @@
-﻿using LeoDeg.Enemies;
+﻿using LeoDeg.Managers;
 using LeoDeg.StateActions;
 using System.Collections;
 using UnityEngine;
@@ -12,7 +12,6 @@ namespace LeoDeg.UI
         [Header ("Scenes names")]
         public string gameName = "Gameplay";
         public string menuName = "Menu";
-
 
         [Header ("Objects References")]
         public Scriptables.StateMachineScriptable playerStateMachine;
@@ -66,19 +65,14 @@ namespace LeoDeg.UI
         {
             playerStateMachine.value.statsProperties.AddHealth (20);
 
-            string[] numbers = { "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven" };
-            newWaveTitle.text = "- Wave " + numbers[waveNumber - 1] + " -";
+            newWaveTitle.text = "Wave " + (waveNumber - 1).ToString ();
 
-            string enemyCountString;
-
-            if (spawner.waves[waveNumber - 1].infiniteWaves)
-                enemyCountString = "Infinite";
-            else enemyCountString = spawner.waves[waveNumber - 1].spawnCount + "";
-
+            string enemyCountString = spawner.waves[waveNumber - 1].infiniteWaves ? "Infinite"
+                : spawner.waves[waveNumber - 1].spawnCount.ToString ();
             newWaveEnemyCount.text = "Enemies: " + enemyCountString;
 
-            StopCoroutine ("AnimateNewWaveBanner");
-            StartCoroutine ("AnimateNewWaveBanner");
+            StopCoroutine (AnimateNewWaveBanner ());
+            StartCoroutine (AnimateNewWaveBanner ());
         }
 
         private void OnGameOver ()

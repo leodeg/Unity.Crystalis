@@ -3,7 +3,7 @@ using LeoDeg.StateActions;
 using System.Collections;
 using UnityEngine;
 
-namespace LeoDeg.Enemies
+namespace LeoDeg.Managers
 {
     public class SpawnManager : MonoBehaviour
     {
@@ -15,9 +15,9 @@ namespace LeoDeg.Enemies
         public event System.Action<int> OnNewWave;
 
         private WaveInfo currentWaveInfo;
-        private int waveCounter = 0;
-        private int remainingToSpawn = 0;
-        private int remainingToAlive = 0;
+        private static int waveCounter = 0;
+        private static int remainingToSpawn = 0;
+        private static int remainingToAlive = 0;
         private float nextSpawnTime = 0f;
 
         private void Start ()
@@ -32,6 +32,8 @@ namespace LeoDeg.Enemies
                 SpawnNewObject ();
             }
         }
+
+        #region Getters
 
         public int GetWaveCount ()
         {
@@ -53,6 +55,10 @@ namespace LeoDeg.Enemies
             return currentWaveInfo.spawnCount;
         }
 
+        #endregion
+
+        #region Spawn Methods
+
         private void SpawnNewObject ()
         {
             remainingToSpawn--;
@@ -65,36 +71,22 @@ namespace LeoDeg.Enemies
         public void SetWaveDifficulty (float moveSpeed, int enemyDamage, float enemyHealth, Color skinColor)
         {
             int randomPoint = Random.Range (0, spawnPoints.Length);
-            GameObject spawned = Instantiate (prefab, spawnPoints[randomPoint].position, Quaternion.identity);
-            StateMachine stateMachine = spawned.GetComponent<StateMachine> ();
-            
-            if (stateMachine != null)
+            GameObject enemyClone = Instantiate (prefab, spawnPoints[randomPoint].position, Quaternion.identity);
+            StateMachine currentEnemy = enemyClone.GetComponent<StateMachine> ();
+
+            if (currentEnemy != null)
             {
-                stateMachine.OnDeath.AddListener (OnObjectDestroy);
-                stateMachine.meshAgentInstance.speed = moveSpeed;
-                stateMachine.inventory.SetRightWeaponDamage(enemyDamage);
-                stateMachine.materialInstance.color = skinColor;
+                currentEnemy.OnDeath.AddListener (OnEnemyDestroy);
+                currentEnemy.meshAgentInstance.speed = moveSpeed;
+                currentEnemy.inventory.SetRightWeaponDamage (enemyDamage);
+                currentEnemy.materialInstance.color = skinColor;
             }
-        }
-
-        public void OnPlayerDeath ()
-        {
-            isDisabled = true;
-        }
-
-        public void OnObjectDestroy ()
-        {
-            remainingToAlive--;
-            Debug.Log ("SpawnManager:OnDeath: remaining to alive: " + remainingToAlive);
-
-            if (remainingToAlive < 1)
-                SpawnNextWave ();
         }
 
         private void SpawnNextWave ()
         {
             waveCounter++;
-            Debug.Log ("SpawnManager:NextWave: wave count: " + waveCounter);
+            //Debug.Log ("SpawnManager:NextWave: wave count: " + waveCounter);
 
             if (waveCounter - 1 < waves.Length)
             {
@@ -110,5 +102,25 @@ namespace LeoDeg.Enemies
                 // End of waves
             }
         }
+
+        #endregion
+
+        #region Events
+
+        public void OnPlayerDeath ()
+        {
+            isDisabled = true;
+        }
+
+        public void OnEnemyDestroy ()
+        {
+            --remainingToAlive;
+            //Debug.Log ("SpawnManager:OnDeath: remaining to alive: " + remainingToAlive);
+
+            if (remainingToAlive < 1)
+                SpawnNextWave ();
+        }
+
+        #endregion
     }
 }

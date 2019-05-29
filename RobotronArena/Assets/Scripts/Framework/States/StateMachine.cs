@@ -94,7 +94,11 @@ namespace LeoDeg.StateActions
 
             if (this.tag == "Enemy")
             {
-                OnDeath.AddListener (GameObject.FindGameObjectWithTag ("Player").GetComponent<StateMachine> ().IncreaseScore);
+                StateMachine player = GameObject.FindGameObjectWithTag ("Player").GetComponent<StateMachine> ();
+
+                if (player != null)
+                    OnDeath.AddListener (player.IncreaseScore);
+                else Debug.Log ("Player is not found!");
             }
 
             if (inventory != null)
@@ -162,23 +166,26 @@ namespace LeoDeg.StateActions
 
             if (statsProperties.GetHealth () <= 0)
             {
-                Debug.Log ("StateMachine:TakeDamage: health: " + statsProperties.GetHealth ());
-                Die ();
+                if (!stateProperties.isDead)
+                {
+                    Die ();
+                }
+
+                stateProperties.isDead = true;
             }
         }
 
         private void Die ()
         {
             if (deathSound != null)
+            {
                 AudioManager.Instance.PlaySound2D (deathSound);
+            }
 
             statsProperties.SetHealth (0);
-            stateProperties.isDead = true;
 
-            Debug.Log ("StateMachine:Die");
             if (OnDeath != null)
             {
-                Debug.Log ("StateMachine:OnDeath");
                 OnDeath.Invoke ();
             }
 
