@@ -20,6 +20,8 @@ namespace LeoDeg.UI
         [Header ("UI References")]
         public Image fadeScreen;
         public GameObject gameOverScreen;
+        public Text gameOverTitle;
+        public Text gameWinTitle;
 
         [Header ("Wave UI References")]
         public RectTransform newWaveBanner;
@@ -33,6 +35,7 @@ namespace LeoDeg.UI
         public Text waveText;
         public Text enemiesText;
 
+        private bool gameWin;
 
         private void Awake ()
         {
@@ -42,6 +45,7 @@ namespace LeoDeg.UI
 
         public void Start ()
         {
+            gameWin = false;
             playerStateMachine.value.OnDeath.AddListener (OnGameOver);
         }
 
@@ -57,6 +61,7 @@ namespace LeoDeg.UI
         {
             if (spawner.GetWaveCount () == spawner.GetTotalWaveCount () && spawner.GetAliveEnemyCount () == 0)
             {
+                gameWin = true;
                 OnGameOver ();
             }
         }
@@ -80,6 +85,7 @@ namespace LeoDeg.UI
             Cursor.visible = true;
             StartCoroutine (Fade (Color.clear, new Color (0, 0, 0, .95f), 1));
 
+
             healthText.transform.parent.gameObject.SetActive (false);
             scoreText.transform.parent.gameObject.SetActive (false);
             waveText.transform.parent.gameObject.SetActive (false);
@@ -87,6 +93,11 @@ namespace LeoDeg.UI
 
             gameOverScoreText.text = scoreText.text;
             gameOverScreen.SetActive (true);
+
+
+            gameWinTitle.gameObject.SetActive (gameWin);
+            gameOverTitle.gameObject.SetActive (!gameWin);
+
         }
 
         private IEnumerator Fade (Color from, Color to, float time)

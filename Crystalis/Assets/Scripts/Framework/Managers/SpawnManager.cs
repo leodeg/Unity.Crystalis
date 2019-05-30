@@ -95,7 +95,7 @@ namespace LeoDeg.Managers
                 remainingToAlive = remainingToSpawn;
 
                 if (OnNewWave != null)
-                    OnNewWave.Invoke (waveCounter);
+                    OnNewWave.Invoke (waveCounter - 1);
             }
             else
             {

@@ -12,6 +12,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerDeathEffect
       objectReference: {fileID: 0}
+    - target: {fileID: 2993752147064167737, guid: 69d7e88450a87c945a2ae7fb19c718d8,
+        type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2993752147064167737, guid: 69d7e88450a87c945a2ae7fb19c718d8,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2993752147064167737, guid: 69d7e88450a87c945a2ae7fb19c718d8,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2993752147064167738, guid: 69d7e88450a87c945a2ae7fb19c718d8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -67,25 +82,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2993752147064167737, guid: 69d7e88450a87c945a2ae7fb19c718d8,
-        type: 3}
-      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 2993752147064167737, guid: 69d7e88450a87c945a2ae7fb19c718d8,
-        type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2993752147064167737, guid: 69d7e88450a87c945a2ae7fb19c718d8,
-        type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 2993752147064167736, guid: 69d7e88450a87c945a2ae7fb19c718d8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f318713fd704f134296732503fd9a9db, type: 2}
+      objectReference: {fileID: 2100000, guid: 880861028a28a5c4196c545580c3b4d9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69d7e88450a87c945a2ae7fb19c718d8, type: 3}
