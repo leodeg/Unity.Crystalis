@@ -156,7 +156,7 @@ namespace LeoDeg.StateActions
             if (takeHitSound != null)
                 AudioManager.Instance.PlaySound (takeHitSound, hitPoint);
 
-            Destroy (Instantiate (deathEffect.gameObject, hitPoint, Quaternion.FromToRotation (Vector3.forward, hitDirection)), deathEffect.startLifetime);
+            Destroy (Instantiate (deathEffect.gameObject, hitPoint, Quaternion.FromToRotation (Vector3.forward, hitDirection)), deathEffect.main.startLifetimeMultiplier);
             TakeDamage (damage);
         }
 

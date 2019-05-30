@@ -7,9 +7,9 @@ namespace LeoDeg.Properties
     public class Stats
     {
         [SerializeField]
-        private float startHealth;
+        private float startHealth = 0;
         [SerializeField]
-        private float currentHealth;
+        private float currentHealth = 0;
 
         [SerializeField]
         private float score;

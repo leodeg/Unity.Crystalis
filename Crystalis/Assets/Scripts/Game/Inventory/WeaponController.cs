@@ -27,7 +27,7 @@ namespace LeoDeg.Inventories
                 Bullet newBullet = Instantiate (bullet, muzzle.position, muzzle.rotation);
                 newBullet.SetSpeed (muzzleVelocity);
 
-                Destroy (Instantiate (shootingEffect.gameObject, muzzle.position, Quaternion.FromToRotation (Vector3.forward, muzzle.forward)), shootingEffect.startLifetime);
+                Destroy (Instantiate (shootingEffect.gameObject, muzzle.position, Quaternion.FromToRotation (Vector3.forward, muzzle.forward)), shootingEffect.main.startLifetimeMultiplier);
 
                 transform.localPosition -= Vector3.forward * Random.Range (0f, maxRecoilForce);
 

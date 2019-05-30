@@ -22,6 +22,11 @@ namespace LeoDeg.Managers
 
         private void Start ()
         {
+            waveCounter = 0;
+            remainingToAlive = 0;
+            remainingToSpawn = 0;
+            nextSpawnTime = 0f;
+
             SpawnNextWave ();
         }
 
@@ -95,7 +100,7 @@ namespace LeoDeg.Managers
                 remainingToAlive = remainingToSpawn;
 
                 if (OnNewWave != null)
-                    OnNewWave.Invoke (waveCounter - 1);
+                    OnNewWave.Invoke (waveCounter);
             }
             else
             {

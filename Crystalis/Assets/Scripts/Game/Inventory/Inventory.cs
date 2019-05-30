@@ -30,11 +30,10 @@ namespace LeoDeg.Inventories
 
         public void EquipLeftGun (Weapon weapon, Transform position)
         {
-            if (leftEquipedWeapon != null)
-            {
-                leftEquipedWeapon.properties = null;
-                Destroy (leftEquipedWeapon.modelPrefab.gameObject);
-            }
+            //if (leftEquipedWeapon != null)
+            //{
+            //    DestroyImmediate (leftEquipedWeapon.modelPrefab.gameObject, false);
+            //}
 
             leftEquipedWeapon = Instantiate (weapon);
             leftEquipedWeapon.Initialize ();
@@ -45,11 +44,10 @@ namespace LeoDeg.Inventories
 
         public void EquipRightGun (Weapon weapon, Transform position)
         {
-            if (rightEquipedWeapon != null)
-            {
-                rightEquipedWeapon.properties = null;
-                Destroy (rightEquipedWeapon.modelPrefab.gameObject);
-            }
+            //if (rightEquipedWeapon != null)
+            //{
+            //    DestroyImmediate (rightEquipedWeapon.modelPrefab.gameObject, false);
+            //}
 
             rightEquipedWeapon = Instantiate (weapon);
             rightEquipedWeapon.Initialize ();

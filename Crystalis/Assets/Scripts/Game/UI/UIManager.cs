@@ -45,6 +45,7 @@ namespace LeoDeg.UI
 
         public void Start ()
         {
+            Cursor.visible = false;
             gameWin = false;
             playerStateMachine.value.OnDeath.AddListener (OnGameOver);
         }
@@ -70,7 +71,7 @@ namespace LeoDeg.UI
         {
             playerStateMachine.value.statsProperties.AddHealth (20);
 
-            newWaveTitle.text = "Wave " + (waveNumber - 1).ToString ();
+            newWaveTitle.text = "Wave " + waveNumber.ToString ();
 
             string enemyCountString = spawner.waves[waveNumber - 1].infiniteWaves ? "Infinite"
                 : spawner.waves[waveNumber - 1].spawnCount.ToString ();
@@ -135,7 +136,7 @@ namespace LeoDeg.UI
                 yield return null;
             }
 
-        }
+        } 
 
         public void StartNewGame ()
         {
