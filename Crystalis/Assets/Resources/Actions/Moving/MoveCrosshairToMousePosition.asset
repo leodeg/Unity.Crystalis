@@ -15,7 +15,7 @@ MonoBehaviour:
   target: {fileID: 11400000, guid: 9ccd3cfd2b14fe0498e77df9e68eb27c, type: 2}
   targetPosition: {fileID: 11400000, guid: 04096b5deb888a142b300b099455e11b, type: 2}
   freezeYPos: 1
-  yPos: 0.2
+  yPos: 1.1
   useLerp: 0
   deltaTime: {fileID: 11400000, guid: 2043598953651fe41a0e40e8e7f593ce, type: 2}
   speed: 5

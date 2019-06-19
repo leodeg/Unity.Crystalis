@@ -6,7 +6,6 @@ using LeoDeg.Properties;
 public class Bullet : MonoBehaviour
 {
     public LayerMask collisionMask;
-    public Color trailColor;
     public float speed = 10f;
     public float damageAmount = 5f;
 
@@ -22,8 +21,6 @@ public class Bullet : MonoBehaviour
         {
             OnHit (initialCollisions[0], transform.position);
         }
-
-        GetComponent<TrailRenderer> ().material.SetColor ("_BulletColor", trailColor);
     }
 
     private void Update ()
