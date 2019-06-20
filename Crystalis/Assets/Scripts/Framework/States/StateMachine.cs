@@ -51,6 +51,9 @@ namespace LeoDeg.StateActions
         public UnityEvent OnDeath;
         public UnityEvent OnDamage;
 
+        [Header ("Debug")]
+        public bool isGod;
+
         [HideInInspector]
         public Transform transformInstance;
 
@@ -162,16 +165,19 @@ namespace LeoDeg.StateActions
 
         public void TakeDamage (float damage)
         {
-            statsProperties.AddHealth (-damage);
-
-            if (statsProperties.GetHealth () <= 0)
+            if (!isGod)
             {
-                if (!stateProperties.isDead)
-                {
-                    Die ();
-                }
+                statsProperties.AddHealth (-damage);
 
-                stateProperties.isDead = true;
+                if (statsProperties.GetHealth () <= 0)
+                {
+                    if (!stateProperties.isDead)
+                    {
+                        Die ();
+                    }
+
+                    stateProperties.isDead = true;
+                }
             }
         }
 

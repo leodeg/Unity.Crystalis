@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 793052985364111595}
   - component: {fileID: 793052985364111594}
   - component: {fileID: 793052985364111593}
-  - component: {fileID: 793052985364111592}
+  - component: {fileID: 1846186003518794900}
   m_Layer: 0
   m_Name: Puramid_Small
   m_TagString: Untagged
@@ -266,8 +266,8 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 0b000000
---- !u!64 &793052985364111592
-MeshCollider:
+--- !u!65 &1846186003518794900
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -276,7 +276,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0.5, y: 0.5, z: -0.5}

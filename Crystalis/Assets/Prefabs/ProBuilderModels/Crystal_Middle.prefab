@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 347779036171003527}
   - component: {fileID: 347779036171003526}
   - component: {fileID: 347779036171003521}
-  - component: {fileID: 347779036171003520}
+  - component: {fileID: 5377015973351075538}
   m_Layer: 0
   m_Name: Crystal_Middle
   m_TagString: Untagged
@@ -350,8 +350,8 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 05000000
---- !u!64 &347779036171003520
-MeshCollider:
+--- !u!65 &5377015973351075538
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -360,7 +360,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.3449901, y: 2, z: 1.3449901}
+  m_Center: {x: 0.67249507, y: 1.3449901, z: -0.0000013113023}
