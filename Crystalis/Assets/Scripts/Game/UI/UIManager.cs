@@ -134,7 +134,7 @@ namespace LeoDeg.UI
                         dir = -1;
                 }
 
-                newWaveBanner.anchoredPosition = Vector2.up * Mathf.Lerp (-170, 45, animatePercent);
+                newWaveBanner.anchoredPosition = Vector2.up * Mathf.Lerp (-420, 45, animatePercent);
                 yield return null;
             }
 
