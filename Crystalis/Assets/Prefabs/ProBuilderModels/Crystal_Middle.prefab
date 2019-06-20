@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 347779036171003526}
   - component: {fileID: 347779036171003521}
   - component: {fileID: 5377015973351075538}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Crystal_Middle
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -54,7 +54,7 @@ MonoBehaviour:
   damage: 0
   maxRecoilForce: 0.7
   reloadAudio: {fileID: 8300000, guid: 66073a71b402c9f4d9c60d9681df377d, type: 3}
-  shootAudio: {fileID: 8300000, guid: bf2f4fd3b0799994a96fe8bbec8ccffc, type: 3}
+  shootAudio: {fileID: 8300000, guid: b5e7a07eb4878ad40833ee6e79248f76, type: 3}
 --- !u!1 &8060536608864999529
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,12 +167,12 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.3
       objectReference: {fileID: 0}
-    - target: {fileID: 5185802464538771924, guid: c7ae556c2d0cc1e449187018eec9ae70,
+    - target: {fileID: 5185802464538771929, guid: c7ae556c2d0cc1e449187018eec9ae70,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 5185802464538771929, guid: c7ae556c2d0cc1e449187018eec9ae70,
+    - target: {fileID: 5185802464538771924, guid: c7ae556c2d0cc1e449187018eec9ae70,
         type: 3}
       propertyPath: m_Mesh
       value: 

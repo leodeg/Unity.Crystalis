@@ -719,7 +719,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 3
-  m_BaseOffset: 1.3
+  m_BaseOffset: 2.4
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &4127082361402279104
@@ -741,10 +741,10 @@ MonoBehaviour:
   inventory: {fileID: 11400000, guid: 478ba8aff61d73f428fd5bdb7c1e872d, type: 2}
   leftHand: {fileID: 3299364259091087365}
   rightHand: {fileID: 2519911709016660279}
-  deathEffect: {fileID: 2993752147064167737, guid: 69d7e88450a87c945a2ae7fb19c718d8,
+  hitEffect: {fileID: 2993752147064167737, guid: 69d7e88450a87c945a2ae7fb19c718d8,
     type: 3}
-  deathSound: {fileID: 8300000, guid: 62366b8d2c37a49dca550841c741317f, type: 3}
-  takeHitSound: {fileID: 8300000, guid: 1d4840678e677424b8921716c72397ea, type: 3}
+  deathSound: {fileID: 8300000, guid: 4176625f7206ab64786a8106c5d4e702, type: 3}
+  takeHitSound: {fileID: 8300000, guid: d3ea43085dbd3844eb3967003504f753, type: 3}
   useNavMeshAgent: 1
   useBoxCollider: 1
   useRigidbody: 0
@@ -794,6 +794,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  isGod: 0
   transformInstance: {fileID: 0}
 --- !u!1 &8497592685093439711
 GameObject:

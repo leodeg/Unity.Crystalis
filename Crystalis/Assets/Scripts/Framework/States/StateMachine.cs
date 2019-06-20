@@ -23,6 +23,7 @@ namespace LeoDeg.StateActions
         public Transform rightHand;
 
         [Header ("Effects")]
+        public ParticleSystem hitEffect;
         public ParticleSystem deathEffect;
         public AudioClip deathSound;
         public AudioClip takeHitSound;
@@ -154,12 +155,15 @@ namespace LeoDeg.StateActions
 
         #region IHittable
 
-        public void TakeHit (float damage, Vector3 hitPoint, Vector3 hitDirection)
+        public void TakeHit (float damage, Vector3 hitPoint, Vector3 hitDirection, bool showHitEffect = true)
         {
             if (takeHitSound != null)
-                AudioManager.Instance.PlaySound (takeHitSound, hitPoint);
+                AudioManager.Instance.PlaySound2D (takeHitSound);
 
-            Destroy (Instantiate (deathEffect.gameObject, hitPoint, Quaternion.FromToRotation (Vector3.forward, hitDirection)), deathEffect.main.startLifetimeMultiplier);
+            if (showHitEffect)
+            {
+                Destroy (Instantiate (hitEffect.gameObject, hitPoint, Quaternion.FromToRotation (Vector3.forward, hitDirection)), hitEffect.main.startLifetimeMultiplier);
+            }
             TakeDamage (damage);
         }
 
@@ -186,6 +190,11 @@ namespace LeoDeg.StateActions
             if (deathSound != null)
             {
                 AudioManager.Instance.PlaySound2D (deathSound);
+            }
+
+            if (deathEffect != null)
+            {
+                Destroy (Instantiate (deathEffect.gameObject, transformInstance.position, Quaternion.identity), deathEffect.main.startLifetimeMultiplier);
             }
 
             statsProperties.SetHealth (0);

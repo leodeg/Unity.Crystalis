@@ -62,7 +62,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 12800
   speed: 10
-  damageAmount: 75
+  damageAmount: 25
   lifeTime: 3
   skinWidth: 0.1
 --- !u!1001 &5979875266007690754

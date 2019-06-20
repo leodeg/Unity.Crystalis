@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 793052985364111594}
   - component: {fileID: 793052985364111593}
   - component: {fileID: 1846186003518794900}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Puramid_Small
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

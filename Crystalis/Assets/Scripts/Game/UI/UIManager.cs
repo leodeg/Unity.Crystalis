@@ -91,6 +91,7 @@ namespace LeoDeg.UI
             scoreText.transform.parent.gameObject.SetActive (false);
             waveText.transform.parent.gameObject.SetActive (false);
             enemiesText.transform.parent.gameObject.SetActive (false);
+            newWaveBanner.gameObject.SetActive (false);
 
             gameOverScoreText.text = scoreText.text;
             gameOverScreen.SetActive (true);
@@ -98,6 +99,7 @@ namespace LeoDeg.UI
 
             gameWinTitle.gameObject.SetActive (gameWin);
             gameOverTitle.gameObject.SetActive (!gameWin);
+
 
         }
 

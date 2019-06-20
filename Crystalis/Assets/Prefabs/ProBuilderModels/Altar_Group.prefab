@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 861556605707244742}
   - component: {fileID: 861556605707244743}
   - component: {fileID: 861556605707244736}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -580,7 +580,7 @@ GameObject:
   - component: {fileID: 861556606647735947}
   - component: {fileID: 861556606647736052}
   - component: {fileID: 861556606647736053}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1118,7 +1118,7 @@ GameObject:
   - component: {fileID: 861556606973337603}
   - component: {fileID: 861556606973337612}
   - component: {fileID: 861556606973337613}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1833,9 +1833,9 @@ GameObject:
   m_Component:
   - component: {fileID: 861556607170125169}
   - component: {fileID: 4946008447139568796}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Altar_Group
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1930,7 +1930,7 @@ GameObject:
   - component: {fileID: 3699326217760700276}
   - component: {fileID: 1445800107218640341}
   - component: {fileID: 576764178964845652}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

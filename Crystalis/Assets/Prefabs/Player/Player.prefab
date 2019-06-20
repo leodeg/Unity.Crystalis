@@ -1241,10 +1241,10 @@ MonoBehaviour:
   inventory: {fileID: 11400000, guid: 8944a7cf64a081743bce266b989a6497, type: 2}
   leftHand: {fileID: 3907179370747504576}
   rightHand: {fileID: 3907179371622594827}
-  deathEffect: {fileID: 4377497513098381038, guid: ce433813aa95c5c4d819aea68dd3879a,
+  hitEffect: {fileID: 4377497513098381038, guid: ce433813aa95c5c4d819aea68dd3879a,
     type: 3}
-  deathSound: {fileID: 8300000, guid: d36a393bca4582043982db9089e1694f, type: 3}
-  takeHitSound: {fileID: 8300000, guid: 72e76810224064300b7d32e8322a5d12, type: 3}
+  deathSound: {fileID: 0}
+  takeHitSound: {fileID: 8300000, guid: 7791fba93d9a9e04996a0fc10f76bc79, type: 3}
   useNavMeshAgent: 0
   useBoxCollider: 1
   useRigidbody: 1
@@ -1260,7 +1260,7 @@ MonoBehaviour:
   statsProperties:
     startHealth: 0
     currentHealth: 0
-    score: 472
+    score: 1027
   stateProperties:
     isAttacking: 0
     isShooting: 0
@@ -1282,6 +1282,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  isGod: 0
   transformInstance: {fileID: 0}
 --- !u!114 &3907179371744310426
 MonoBehaviour:
@@ -1302,7 +1303,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f6f2e64f17b44dd4ebc73670ae9b0155, type: 2}
   - {fileID: 11400000, guid: be5cd64d65c61d942a25d364a4496165, type: 2}
   - {fileID: 11400000, guid: a835625a1b9fe834088729a03e11bb80, type: 2}
-  - {fileID: 11400000, guid: 4211ac51f38729f41b44a032dec3da76, type: 2}
   onEnable: []
   onDisable: []
 --- !u!114 &3907179371744310424
